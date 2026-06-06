@@ -1,0 +1,83 @@
+id,label,name_zh,kind,kind_zh,color,size
+x1,x1,x1 A进料（流股1）,variable,变量,#2563eb,5
+x2,x2,x2 D进料（流股2）,variable,变量,#2563eb,5
+x3,x3,x3 E进料（流股3）,variable,变量,#2563eb,5
+x4,x4,x4 A/C进料（流股4）,variable,变量,#2563eb,5
+x5,x5,x5 循环流量（流股8）,variable,变量,#2563eb,5
+x6,x6,x6 反应器进料流量（流股6）,variable,变量,#2563eb,5
+x7,x7,x7 反应器压力,variable,变量,#2563eb,5
+x8,x8,x8 反应器液位,variable,变量,#2563eb,5
+x9,x9,x9 反应器温度,variable,变量,#2563eb,5
+x10,x10,x10 排放流量（流股9）,variable,变量,#2563eb,5
+x11,x11,x11 产品分离器温度,variable,变量,#2563eb,5
+x12,x12,x12 产品分离器液位,variable,变量,#2563eb,5
+x13,x13,x13 产品分离器压力,variable,变量,#2563eb,5
+x14,x14,x14 产品分离器底流（流股10）,variable,变量,#2563eb,5
+x15,x15,x15 汽提塔液位,variable,变量,#2563eb,5
+x16,x16,x16 汽提塔压力,variable,变量,#2563eb,5
+x17,x17,x17 汽提塔底流（流股11）,variable,变量,#2563eb,5
+x18,x18,x18 汽提塔温度,variable,变量,#2563eb,5
+x19,x19,x19 汽提塔蒸汽流量,variable,变量,#2563eb,5
+x20,x20,x20 压缩机功率,variable,变量,#2563eb,5
+x21,x21,x21 反应器冷却水出口温度,variable,变量,#2563eb,5
+x22,x22,x22 分离器冷却水出口温度,variable,变量,#2563eb,5
+x23,x23,x23 反应器进料组分A（流股6）,variable,变量,#2563eb,5
+x24,x24,x24 反应器进料组分B（流股6）,variable,变量,#2563eb,5
+x25,x25,x25 反应器进料组分C（流股6）,variable,变量,#2563eb,5
+x26,x26,x26 反应器进料组分D（流股6）,variable,变量,#2563eb,5
+x27,x27,x27 反应器进料组分E（流股6）,variable,变量,#2563eb,5
+x28,x28,x28 反应器进料组分F（流股6）,variable,变量,#2563eb,5
+x29,x29,x29 排放气组分A（流股9）,variable,变量,#2563eb,5
+x30,x30,x30 排放气组分B（流股9）,variable,变量,#2563eb,5
+x31,x31,x31 排放气组分C（流股9）,variable,变量,#2563eb,5
+x32,x32,x32 排放气组分D（流股9）,variable,变量,#2563eb,5
+x33,x33,x33 排放气组分E（流股9）,variable,变量,#2563eb,5
+x34,x34,x34 排放气组分F（流股9）,variable,变量,#2563eb,5
+x35,x35,x35 排放气组分G（流股9）,variable,变量,#2563eb,5
+x36,x36,x36 排放气组分H（流股9）,variable,变量,#2563eb,5
+x37,x37,x37 产品组分D（流股11）,variable,变量,#2563eb,5
+x38,x38,x38 产品组分E（流股11）,variable,变量,#2563eb,5
+x39,x39,x39 产品组分F（流股11）,variable,变量,#2563eb,5
+x40,x40,x40 产品组分G（流股11）,variable,变量,#2563eb,5
+x41,x41,x41 产品组分H（流股11）,variable,变量,#2563eb,5
+x42,x42,x42 D进料流量（流股2）,variable,变量,#2563eb,5
+x43,x43,x43 E进料流量（流股3）,variable,变量,#2563eb,5
+x44,x44,x44 A进料流量（流股1）,variable,变量,#2563eb,5
+x45,x45,x45 A/C进料流量（流股4）,variable,变量,#2563eb,5
+x46,x46,x46 压缩机循环阀,variable,变量,#2563eb,5
+x47,x47,x47 排放阀（流股9）,variable,变量,#2563eb,5
+x48,x48,x48 分离器液体流量（流股10）,variable,变量,#2563eb,5
+x49,x49,x49 汽提塔产品流量（流股11）,variable,变量,#2563eb,5
+x50,x50,x50 汽提塔蒸汽阀,variable,变量,#2563eb,5
+x51,x51,x51 反应器冷却水流量,variable,变量,#2563eb,5
+x52,x52,x52 冷凝器冷却水流量,variable,变量,#2563eb,5
+Stream 1,Stream 1,流股 1,stream,流股,#059669,8
+Stream 2,Stream 2,流股 2,stream,流股,#059669,8
+Stream 3,Stream 3,流股 3,stream,流股,#059669,8
+Stream 4,Stream 4,流股 4,stream,流股,#059669,8
+Stream 5,Stream 5,流股 5,stream,流股,#059669,8
+Stream 6,Stream 6,流股 6,stream,流股,#059669,8
+Stream 7,Stream 7,流股 7,stream,流股,#059669,8
+Stream 8,Stream 8,流股 8,stream,流股,#059669,8
+Stream 9,Stream 9,流股 9,stream,流股,#059669,8
+Stream 10,Stream 10,流股 10,stream,流股,#059669,8
+Stream 11,Stream 11,流股 11,stream,流股,#059669,8
+Stream 12,Stream 12,流股 12,stream,流股,#059669,8
+Stream 13,Stream 13,流股 13,stream,流股,#059669,8
+Stream 14,Stream 14,流股 14,stream,流股,#059669,8
+A,A,物质A,substance,物质,#d97706,7
+B,B,物质B,substance,物质,#d97706,7
+C,C,物质C,substance,物质,#d97706,7
+Compressor,Compressor,压缩机,device,设备,#dc2626,12
+Condenser,Condenser,冷凝器,device,设备,#dc2626,12
+Cooling Water,Cooling Water,冷却水,substance,物质,#d97706,7
+D,D,物质D,substance,物质,#d97706,7
+E,E,物质E,substance,物质,#d97706,7
+F,F,物质F,substance,物质,#d97706,7
+G,G,物质G,substance,物质,#d97706,7
+H,H,物质H,substance,物质,#d97706,7
+Reactor,Reactor,反应器,device,设备,#dc2626,12
+Separator,Separator,产品分离器,device,设备,#dc2626,12
+Steam,Steam,蒸汽,substance,物质,#d97706,7
+Stripper,Stripper,汽提塔,device,设备,#dc2626,12
+Stripper Steam,Stripper Steam,汽提蒸汽,stream,流股,#059669,8

@@ -1,0 +1,94 @@
+2026-06-06 13:49:50 Starting Marvis home migration finalization.
+2026-06-06 13:49:52 Renaming original source to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis.backup_20260606_134950
+2026-06-06 13:51:43 Starting Marvis home migration finalization.
+2026-06-06 13:51:43 Looking for Marvis-related processes.
+2026-06-06 13:51:45 Synchronizing latest source data to target.
+2026-06-06 13:51:45 
+2026-06-06 13:51:45 -------------------------------------------------------------------------------
+2026-06-06 13:51:45    ROBOCOPY     ::     Windows 的可靠文件复制                              
+2026-06-06 13:51:45 -------------------------------------------------------------------------------
+2026-06-06 13:51:45 
+2026-06-06 13:51:45   开始时间: 2026年6月6日 13:51:45
+2026-06-06 13:51:45         源: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\
+2026-06-06 13:51:45       目标: E:\Marvis\MarvisHome\
+2026-06-06 13:51:45 
+2026-06-06 13:51:45       文件: *.*
+2026-06-06 13:51:45 	    
+2026-06-06 13:51:45       选项: *.* /NDL /NFL /S /E /DCOPY:DAT /COPY:DAT /NP /XJ /R:2 /W:1 
+2026-06-06 13:51:45 
+2026-06-06 13:51:45 ------------------------------------------------------------------------------
+2026-06-06 13:51:45 
+2026-06-06 13:51:45 
+2026-06-06 13:51:45 ------------------------------------------------------------------------------
+2026-06-06 13:51:45 
+2026-06-06 13:51:45                   总数        复制        跳过       不匹配        失败        其他
+2026-06-06 13:51:45        目录:        68         0        68         0         0         0
+2026-06-06 13:51:45        文件:      2081         0      2081         0         0         0
+2026-06-06 13:51:45        字节:  244.10 m         0  244.10 m         0         0         0
+2026-06-06 13:51:45        时间:   0:00:00   0:00:00                       0:00:00   0:00:00
+2026-06-06 13:51:45    已结束: 2026年6月6日 13:51:45
+2026-06-06 13:51:45 
+2026-06-06 13:51:45 Renaming original source to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis.backup_20260606_135143
+2026-06-06 13:51:45 Root junction failed: 对路径“C:\Users\Administrator\AppData\Roaming\Tencent\Marvis”的访问被拒绝。
+2026-06-06 13:51:45 Falling back to child directory junctions.
+2026-06-06 13:51:45 Renaming child to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\cef -> C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\cef.backup_20260606_135145
+2026-06-06 13:51:45 Creating child junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\cef -> E:\Marvis\MarvisHome\cef
+2026-06-06 13:51:45 Renaming child to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\db -> C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\db.backup_20260606_135145
+2026-06-06 13:51:45 Creating child junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\db -> E:\Marvis\MarvisHome\db
+2026-06-06 13:51:45 Renaming child to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\marvis-offline-page -> C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\marvis-offline-page.backup_20260606_135145
+2026-06-06 13:51:45 Creating child junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\marvis-offline-page -> E:\Marvis\MarvisHome\marvis-offline-page
+2026-06-06 13:51:45 Renaming child to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User -> C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User.backup_20260606_135145
+2026-06-06 13:52:57 Starting Marvis home migration finalization.
+2026-06-06 13:52:57 Looking for Marvis-related processes.
+2026-06-06 13:53:00 Synchronizing latest source data to target.
+2026-06-06 13:53:00 
+2026-06-06 13:53:00 -------------------------------------------------------------------------------
+2026-06-06 13:53:00    ROBOCOPY     ::     Windows 的可靠文件复制                              
+2026-06-06 13:53:00 -------------------------------------------------------------------------------
+2026-06-06 13:53:00 
+2026-06-06 13:53:00   开始时间: 2026年6月6日 13:53:00
+2026-06-06 13:53:00         源: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\
+2026-06-06 13:53:00       目标: E:\Marvis\MarvisHome\
+2026-06-06 13:53:00 
+2026-06-06 13:53:00       文件: *.*
+2026-06-06 13:53:00 	    
+2026-06-06 13:53:00       选项: *.* /NDL /NFL /S /E /DCOPY:DAT /COPY:DAT /NP /XJ /R:2 /W:1 
+2026-06-06 13:53:00 
+2026-06-06 13:53:00 ------------------------------------------------------------------------------
+2026-06-06 13:53:00 
+2026-06-06 13:53:00 
+2026-06-06 13:53:00 ------------------------------------------------------------------------------
+2026-06-06 13:53:00 
+2026-06-06 13:53:00                   总数        复制        跳过       不匹配        失败        其他
+2026-06-06 13:53:00        目录:        71        44        27         0         0         0
+2026-06-06 13:53:00        文件:      2081      2015        66         0         0         0
+2026-06-06 13:53:00        字节:  244.10 m  219.53 m   24.56 m         0         0         0
+2026-06-06 13:53:00        时间:   0:00:00   0:00:00                       0:00:00   0:00:00
+2026-06-06 13:53:00 
+2026-06-06 13:53:00 
+2026-06-06 13:53:00        速度:           383,024,718 字节/秒。
+2026-06-06 13:53:00        速度:            21,916.850 MB/分钟。
+2026-06-06 13:53:00    已结束: 2026年6月6日 13:53:00
+2026-06-06 13:53:00 
+2026-06-06 13:53:00 Renaming original source to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis.backup_20260606_135257
+2026-06-06 13:53:00 Root junction failed: 对路径“C:\Users\Administrator\AppData\Roaming\Tencent\Marvis”的访问被拒绝。
+2026-06-06 13:53:00 Falling back to child directory junctions.
+2026-06-06 13:53:00 Child already junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\cef -> E:\Marvis\MarvisHome\cef
+2026-06-06 13:53:00 Child already junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\db -> E:\Marvis\MarvisHome\db
+2026-06-06 13:53:00 Child already junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\marvis-offline-page -> E:\Marvis\MarvisHome\marvis-offline-page
+2026-06-06 13:53:00 Renaming child to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User -> C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User.backup_20260606_135300
+2026-06-06 13:53:00 Child junction failed for User: 对路径“C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User”的访问被拒绝。
+2026-06-06 13:53:00 Falling back to per-account junctions under User.
+2026-06-06 13:53:00 Renaming account to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User\default_user -> C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User\default_user.backup_20260606_135300
+2026-06-06 13:53:00 Creating account junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User\default_user -> E:\Marvis\MarvisHome\User\default_user
+2026-06-06 13:53:00 Renaming account to backup: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User\oAN1i2Rlhu1An2zA6TIc8GKr7mD4 -> C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User\oAN1i2Rlhu1An2zA6TIc8GKr7mD4.backup_20260606_135300
+2026-06-06 13:53:00 Creating account junction: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis\User\oAN1i2Rlhu1An2zA6TIc8GKr7mD4 -> E:\Marvis\MarvisHome\User\oAN1i2Rlhu1An2zA6TIc8GKr7mD4
+2026-06-06 13:53:00 Verified source LinkType: 
+2026-06-06 13:53:00 Verified source Target: 
+2026-06-06 13:53:00 Verified child cef: LinkType=Junction Target=E:\Marvis\MarvisHome\cef
+2026-06-06 13:53:00 Verified child db: LinkType=Junction Target=E:\Marvis\MarvisHome\db
+2026-06-06 13:53:00 Verified child marvis-offline-page: LinkType=Junction Target=E:\Marvis\MarvisHome\marvis-offline-page
+2026-06-06 13:53:00 Verified child User: LinkType= Target=
+2026-06-06 13:53:00 Backup kept at: C:\Users\Administrator\AppData\Roaming\Tencent\Marvis.backup_20260606_135257
+2026-06-06 13:53:00 Fallback child junctions used: True
+2026-06-06 13:53:00 Marvis home migration finalization completed.

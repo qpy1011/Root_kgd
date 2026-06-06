@@ -1,0 +1,274 @@
+source,target,relation,relation_zh,color
+Stream 1,x1,State,状态,#64748b
+x1,Stream 1,State of,状态所属,#64748b
+Stream 2,x2,State,状态,#64748b
+x2,Stream 2,State of,状态所属,#64748b
+Stream 3,x3,State,状态,#64748b
+x3,Stream 3,State of,状态所属,#64748b
+Stream 4,x4,State,状态,#64748b
+x4,Stream 4,State of,状态所属,#64748b
+Stream 8,x5,State,状态,#64748b
+x5,Stream 8,State of,状态所属,#64748b
+Stream 6,x6,State,状态,#64748b
+x6,Stream 6,State of,状态所属,#64748b
+Reactor,x7,State,状态,#64748b
+x7,Reactor,State of,状态所属,#64748b
+Reactor,x8,State,状态,#64748b
+x8,Reactor,State of,状态所属,#64748b
+Reactor,x9,State,状态,#64748b
+x9,Reactor,State of,状态所属,#64748b
+Stream 9,x10,State,状态,#64748b
+x10,Stream 9,State of,状态所属,#64748b
+Separator,x11,State,状态,#64748b
+x11,Separator,State of,状态所属,#64748b
+Stream 14,x11,State,状态,#64748b
+x11,Stream 14,State of,状态所属,#64748b
+Separator,x12,State,状态,#64748b
+x12,Separator,State of,状态所属,#64748b
+Separator,x13,State,状态,#64748b
+x13,Separator,State of,状态所属,#64748b
+Stream 10,x14,State,状态,#64748b
+x14,Stream 10,State of,状态所属,#64748b
+Stripper,x15,State,状态,#64748b
+x15,Stripper,State of,状态所属,#64748b
+Stripper,x16,State,状态,#64748b
+x16,Stripper,State of,状态所属,#64748b
+Stream 11,x17,State,状态,#64748b
+x17,Stream 11,State of,状态所属,#64748b
+Stripper,x18,State,状态,#64748b
+x18,Stripper,State of,状态所属,#64748b
+Stripper,x19,State,状态,#64748b
+x19,Stripper,State of,状态所属,#64748b
+Compressor,x20,State,状态,#64748b
+x20,Compressor,State of,状态所属,#64748b
+Reactor,x21,State,状态,#64748b
+x21,Reactor,State of,状态所属,#64748b
+Stream 12,x21,State,状态,#64748b
+x21,Stream 12,State of,状态所属,#64748b
+Condenser,x22,State,状态,#64748b
+x22,Condenser,State of,状态所属,#64748b
+Stream 13,x22,State,状态,#64748b
+x22,Stream 13,State of,状态所属,#64748b
+Stream 6,x23,State,状态,#64748b
+x23,Stream 6,State of,状态所属,#64748b
+Stream 6,x24,State,状态,#64748b
+x24,Stream 6,State of,状态所属,#64748b
+Stream 6,x25,State,状态,#64748b
+x25,Stream 6,State of,状态所属,#64748b
+Stream 6,x26,State,状态,#64748b
+x26,Stream 6,State of,状态所属,#64748b
+Stream 6,x27,State,状态,#64748b
+x27,Stream 6,State of,状态所属,#64748b
+Stream 6,x28,State,状态,#64748b
+x28,Stream 6,State of,状态所属,#64748b
+Stream 9,x29,State,状态,#64748b
+x29,Stream 9,State of,状态所属,#64748b
+Stream 9,x30,State,状态,#64748b
+x30,Stream 9,State of,状态所属,#64748b
+Stream 9,x31,State,状态,#64748b
+x31,Stream 9,State of,状态所属,#64748b
+Stream 9,x32,State,状态,#64748b
+x32,Stream 9,State of,状态所属,#64748b
+Stream 9,x33,State,状态,#64748b
+x33,Stream 9,State of,状态所属,#64748b
+Stream 9,x34,State,状态,#64748b
+x34,Stream 9,State of,状态所属,#64748b
+Stream 9,x35,State,状态,#64748b
+x35,Stream 9,State of,状态所属,#64748b
+Stream 9,x36,State,状态,#64748b
+x36,Stream 9,State of,状态所属,#64748b
+Stream 11,x37,State,状态,#64748b
+x37,Stream 11,State of,状态所属,#64748b
+Stream 11,x38,State,状态,#64748b
+x38,Stream 11,State of,状态所属,#64748b
+Stream 11,x39,State,状态,#64748b
+x39,Stream 11,State of,状态所属,#64748b
+Stream 11,x40,State,状态,#64748b
+x40,Stream 11,State of,状态所属,#64748b
+Stream 11,x41,State,状态,#64748b
+x41,Stream 11,State of,状态所属,#64748b
+Stream 2,x42,State,状态,#64748b
+x42,Stream 2,State of,状态所属,#64748b
+Stream 3,x43,State,状态,#64748b
+x43,Stream 3,State of,状态所属,#64748b
+Stream 1,x44,State,状态,#64748b
+x44,Stream 1,State of,状态所属,#64748b
+Stream 4,x45,State,状态,#64748b
+x45,Stream 4,State of,状态所属,#64748b
+Compressor,x46,State,状态,#64748b
+x46,Compressor,State of,状态所属,#64748b
+Stream 8,x46,State,状态,#64748b
+x46,Stream 8,State of,状态所属,#64748b
+Stream 9,x47,State,状态,#64748b
+x47,Stream 9,State of,状态所属,#64748b
+Separator,x48,State,状态,#64748b
+x48,Separator,State of,状态所属,#64748b
+Stream 10,x48,State,状态,#64748b
+x48,Stream 10,State of,状态所属,#64748b
+Stripper,x49,State,状态,#64748b
+x49,Stripper,State of,状态所属,#64748b
+Stream 11,x49,State,状态,#64748b
+x49,Stream 11,State of,状态所属,#64748b
+Stripper,x50,State,状态,#64748b
+x50,Stripper,State of,状态所属,#64748b
+Reactor,x51,State,状态,#64748b
+x51,Reactor,State of,状态所属,#64748b
+Stream 12,x51,State,状态,#64748b
+x51,Stream 12,State of,状态所属,#64748b
+Condenser,x52,State,状态,#64748b
+x52,Condenser,State of,状态所属,#64748b
+Stream 13,x52,State,状态,#64748b
+x52,Stream 13,State of,状态所属,#64748b
+A,x23,State,状态,#64748b
+x23,A,State of,状态所属,#64748b
+B,x24,State,状态,#64748b
+x24,B,State of,状态所属,#64748b
+C,x25,State,状态,#64748b
+x25,C,State of,状态所属,#64748b
+D,x26,State,状态,#64748b
+x26,D,State of,状态所属,#64748b
+E,x27,State,状态,#64748b
+x27,E,State of,状态所属,#64748b
+F,x28,State,状态,#64748b
+x28,F,State of,状态所属,#64748b
+A,x29,State,状态,#64748b
+x29,A,State of,状态所属,#64748b
+B,x30,State,状态,#64748b
+x30,B,State of,状态所属,#64748b
+C,x31,State,状态,#64748b
+x31,C,State of,状态所属,#64748b
+D,x32,State,状态,#64748b
+x32,D,State of,状态所属,#64748b
+E,x33,State,状态,#64748b
+x33,E,State of,状态所属,#64748b
+F,x34,State,状态,#64748b
+x34,F,State of,状态所属,#64748b
+G,x35,State,状态,#64748b
+x35,G,State of,状态所属,#64748b
+H,x36,State,状态,#64748b
+x36,H,State of,状态所属,#64748b
+D,x37,State,状态,#64748b
+x37,D,State of,状态所属,#64748b
+E,x38,State,状态,#64748b
+x38,E,State of,状态所属,#64748b
+F,x39,State,状态,#64748b
+x39,F,State of,状态所属,#64748b
+G,x40,State,状态,#64748b
+x40,G,State of,状态所属,#64748b
+H,x41,State,状态,#64748b
+x41,H,State of,状态所属,#64748b
+Stream 1,Stream 6,Output,输出,#059669
+Stream 2,Stream 6,Output,输出,#059669
+Stream 3,Stream 6,Output,输出,#059669
+Stream 4,Stream 6,Output,输出,#059669
+Stream 8,Stream 6,Output,输出,#059669
+Stream 6,Reactor,Output,输出,#059669
+Reactor,Stream 7,Output,输出,#059669
+Stream 7,Condenser,Output,输出,#059669
+Condenser,Stream 14,Output,输出,#059669
+Stream 14,Separator,Output,输出,#059669
+Separator,Stream 8,Output,输出,#059669
+Separator,Stream 9,Output,输出,#059669
+Separator,Stream 10,Output,输出,#059669
+Stream 8,Compressor,Output,输出,#059669
+Compressor,Stream 5,Output,输出,#059669
+Stream 5,Stream 6,Output,输出,#059669
+Stream 10,Stripper,Output,输出,#059669
+Stripper,Stream 11,Output,输出,#059669
+Stripper,Stream 8,Output,输出,#059669
+Stream 12,Reactor,Output,输出,#059669
+Stream 13,Condenser,Output,输出,#059669
+Stream 1,A,Contain,包含,#d97706
+A,Stream 1,Contained by,被包含,#d97706
+Stream 2,D,Contain,包含,#d97706
+D,Stream 2,Contained by,被包含,#d97706
+Stream 3,E,Contain,包含,#d97706
+E,Stream 3,Contained by,被包含,#d97706
+Stream 4,A,Contain,包含,#d97706
+A,Stream 4,Contained by,被包含,#d97706
+Stream 4,C,Contain,包含,#d97706
+C,Stream 4,Contained by,被包含,#d97706
+Stream 6,A,Contain,包含,#d97706
+A,Stream 6,Contained by,被包含,#d97706
+Stream 6,B,Contain,包含,#d97706
+B,Stream 6,Contained by,被包含,#d97706
+Stream 6,C,Contain,包含,#d97706
+C,Stream 6,Contained by,被包含,#d97706
+Stream 6,D,Contain,包含,#d97706
+D,Stream 6,Contained by,被包含,#d97706
+Stream 6,E,Contain,包含,#d97706
+E,Stream 6,Contained by,被包含,#d97706
+Stream 6,F,Contain,包含,#d97706
+F,Stream 6,Contained by,被包含,#d97706
+Stream 7,A,Contain,包含,#d97706
+A,Stream 7,Contained by,被包含,#d97706
+Stream 7,C,Contain,包含,#d97706
+C,Stream 7,Contained by,被包含,#d97706
+Stream 7,D,Contain,包含,#d97706
+D,Stream 7,Contained by,被包含,#d97706
+Stream 7,E,Contain,包含,#d97706
+E,Stream 7,Contained by,被包含,#d97706
+Stream 7,F,Contain,包含,#d97706
+F,Stream 7,Contained by,被包含,#d97706
+Stream 7,G,Contain,包含,#d97706
+G,Stream 7,Contained by,被包含,#d97706
+Stream 7,H,Contain,包含,#d97706
+H,Stream 7,Contained by,被包含,#d97706
+Stream 8,A,Contain,包含,#d97706
+A,Stream 8,Contained by,被包含,#d97706
+Stream 8,C,Contain,包含,#d97706
+C,Stream 8,Contained by,被包含,#d97706
+Stream 8,D,Contain,包含,#d97706
+D,Stream 8,Contained by,被包含,#d97706
+Stream 8,E,Contain,包含,#d97706
+E,Stream 8,Contained by,被包含,#d97706
+Stream 8,F,Contain,包含,#d97706
+F,Stream 8,Contained by,被包含,#d97706
+Stream 8,G,Contain,包含,#d97706
+G,Stream 8,Contained by,被包含,#d97706
+Stream 8,H,Contain,包含,#d97706
+H,Stream 8,Contained by,被包含,#d97706
+Stream 9,A,Contain,包含,#d97706
+A,Stream 9,Contained by,被包含,#d97706
+Stream 9,B,Contain,包含,#d97706
+B,Stream 9,Contained by,被包含,#d97706
+Stream 9,C,Contain,包含,#d97706
+C,Stream 9,Contained by,被包含,#d97706
+Stream 9,D,Contain,包含,#d97706
+D,Stream 9,Contained by,被包含,#d97706
+Stream 9,E,Contain,包含,#d97706
+E,Stream 9,Contained by,被包含,#d97706
+Stream 9,F,Contain,包含,#d97706
+F,Stream 9,Contained by,被包含,#d97706
+Stream 9,G,Contain,包含,#d97706
+G,Stream 9,Contained by,被包含,#d97706
+Stream 9,H,Contain,包含,#d97706
+H,Stream 9,Contained by,被包含,#d97706
+Stream 10,D,Contain,包含,#d97706
+D,Stream 10,Contained by,被包含,#d97706
+Stream 10,E,Contain,包含,#d97706
+E,Stream 10,Contained by,被包含,#d97706
+Stream 10,F,Contain,包含,#d97706
+F,Stream 10,Contained by,被包含,#d97706
+Stream 10,G,Contain,包含,#d97706
+G,Stream 10,Contained by,被包含,#d97706
+Stream 10,H,Contain,包含,#d97706
+H,Stream 10,Contained by,被包含,#d97706
+Stream 11,D,Contain,包含,#d97706
+D,Stream 11,Contained by,被包含,#d97706
+Stream 11,E,Contain,包含,#d97706
+E,Stream 11,Contained by,被包含,#d97706
+Stream 11,F,Contain,包含,#d97706
+F,Stream 11,Contained by,被包含,#d97706
+Stream 11,G,Contain,包含,#d97706
+G,Stream 11,Contained by,被包含,#d97706
+Stream 11,H,Contain,包含,#d97706
+H,Stream 11,Contained by,被包含,#d97706
+A,G,Generate,生成,#7c3aed
+C,G,Generate,生成,#7c3aed
+D,G,Generate,生成,#7c3aed
+A,H,Generate,生成,#7c3aed
+C,H,Generate,生成,#7c3aed
+E,H,Generate,生成,#7c3aed
+A,F,Generate,生成,#7c3aed
+E,F,Generate,生成,#7c3aed

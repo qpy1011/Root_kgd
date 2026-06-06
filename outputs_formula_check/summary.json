@@ -1,0 +1,88 @@
+[
+  {
+    "fault_id": 1,
+    "description": "A/C feed ratio step change in stream 4.",
+    "n_components": 10,
+    "expected_variables": [
+      "x4",
+      "x45"
+    ],
+    "expected_physical": [
+      "Stream 4"
+    ],
+    "top_variable": "x50",
+    "top_physical": "Stripper",
+    "expected_variable_ranks": {
+      "x4": 8,
+      "x45": 3
+    },
+    "expected_physical_ranks": {
+      "Stream 4": 2
+    }
+  },
+  {
+    "fault_id": 4,
+    "description": "Reactor cooling-water inlet temperature step change.",
+    "n_components": 10,
+    "expected_variables": [
+      "x51"
+    ],
+    "expected_physical": [
+      "Stream 12",
+      "Reactor"
+    ],
+    "top_variable": "x51",
+    "top_physical": "Stream 12",
+    "expected_variable_ranks": {
+      "x51": 1
+    },
+    "expected_physical_ranks": {
+      "Stream 12": 1,
+      "Reactor": 2
+    }
+  },
+  {
+    "fault_id": 6,
+    "description": "A feed loss in stream 1.",
+    "n_components": 10,
+    "expected_variables": [
+      "x1",
+      "x44"
+    ],
+    "expected_physical": [
+      "Stream 1"
+    ],
+    "top_variable": "x1",
+    "top_physical": "Stream 1",
+    "expected_variable_ranks": {
+      "x1": 1,
+      "x44": 2
+    },
+    "expected_physical_ranks": {
+      "Stream 1": 1
+    }
+  },
+  {
+    "fault_id": 12,
+    "description": "Condenser cooling-water inlet temperature random variation.",
+    "n_components": 10,
+    "expected_variables": [
+      "x11"
+    ],
+    "expected_physical": [
+      "Stream 14",
+      "Condenser",
+      "Separator"
+    ],
+    "top_variable": "x11",
+    "top_physical": "Stream 14",
+    "expected_variable_ranks": {
+      "x11": 1
+    },
+    "expected_physical_ranks": {
+      "Stream 14": 1,
+      "Condenser": 7,
+      "Separator": 3
+    }
+  }
+]

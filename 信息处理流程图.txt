@@ -1,0 +1,24 @@
+```mermaid
+flowchart LR
+  A[tennessee-eastman-profBraatz-master/*.dat<br/>原始 TEP 数据] --> B[rootkgd/data.py<br/>读取并整理样本矩阵]
+
+  B --> C[rootkgd/rbc.py<br/>RBC / SPE 贡献度]
+  C --> D[rootkgd/experiment.py<br/>切故障窗口、跑复现实验]
+  D --> E[outputs/*.csv, summary.json<br/>复现结果]
+
+  A --> F[rootkgd/tep.py<br/>构建 TEP PIKG]
+  F --> G[rootkgd/graph.py<br/>知识图谱结构]
+  G --> H[rootkgd/rfpa.py<br/>RFPA 传播与 RootScore]
+  C --> H
+  H --> I[变量 / 物理实体根因排序]
+
+  F --> J[rootkgd/visualization.py<br/>导出可视化文件]
+  G --> J
+  J --> K[visualizations/tep_pikg/tep_pikg_nodes.csv]
+  J --> L[visualizations/tep_pikg/tep_pikg_edges.csv]
+  J --> M[visualizations/tep_pikg/neo4j_import.cypher]
+  K --> N[Neo4j]
+  L --> N
+  M --> N
+
+```
