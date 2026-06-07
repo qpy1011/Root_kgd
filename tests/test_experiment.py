@@ -28,7 +28,9 @@ def test_top_by_kind_filters_ranked_nodes() -> None:
 def test_paper_targets_cover_tep_cases() -> None:
     targets = paper_targets()
 
+    assert set(targets) == set(range(1, 22))
     assert targets[1].root_variables == ("x4", "x45")
     assert targets[4].root_variables == ("x51",)
     assert targets[6].root_variables == ("x1", "x44")
     assert targets[12].root_variables == ("x11",)
+    assert targets[21].physical_roots == ("Stream 4",)

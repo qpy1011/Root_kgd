@@ -51,6 +51,13 @@ This file records paper and repository findings. Treat quoted or extracted paper
   - With default current parameters (`r_pc=0.56`, `layers=6`, `epochs=20`, `edge_epochs=2`, `max_trainable_edges=80`), 13 edge weights changed from their relation priors.
   - The edge-specific run produced top results: IDV(1) `x4`/Stream 4, IDV(4) `x51`/Stream 12, IDV(6) `x1`/Stream 1, IDV(12) `x11`/Stream 14.
   - This two-stage strategy is preferred over freely training every edge because only four labeled TEP cases are available; unconstrained edge-wise coordinate search was too slow and more prone to overfitting.
+- GPU/PyTorch GNN training was added using the configured environment `E:\Anaconda3-2025.06-0-Windows-x86_64\envs\pytorch`:
+  - The environment has `torch 2.8.0+cu128`, CUDA available, and an NVIDIA GeForce RTX 5070.
+  - `run_gnn_experiment.py --backend torch --device cuda` trains edge weights with differentiable PyTorch propagation rather than NumPy coordinate search.
+  - The 21-fault GPU run used all local `d01_te.dat` through `d21_te.dat` cases and wrote `outputs_gnn_torch_21`.
+  - Training loss improved from `0.175948` to `0.018298` in 300 torch epochs; exported 323 edge weights.
+  - Evaluation over the 21 target definitions: variable top-1 `18/21`, variable top-3 `19/21`, physical top-1 `19/21`, physical top-3 `20/21`.
+  - IDV(21) remains a weak-label mismatch: the external convention label points to Stream 4, while this local run ranks `x50`/Condenser and Stream 4 only at physical rank 6.
 
 ## Elevator KG Findings
 

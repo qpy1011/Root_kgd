@@ -8,6 +8,7 @@ from pathlib import Path
 from rootkgd.experiment import paper_targets, run_tep_case, top_by_kind
 from rootkgd.gnn import (
     fit_gnn_parameters,
+    fit_gnn_parameters_torch,
     gnn_ranking_loss,
     gnn_root_scores,
     initial_gnn_parameters_from_rfpa,
@@ -33,25 +34,34 @@ def parse_args() -> argparse.Namespace:
         "--faults",
         nargs="+",
         type=int,
-        default=[1, 4, 6, 12],
+        default=list(range(1, 22)),
         help="TEP IDV fault numbers to run.",
     )
     parser.add_argument("--fault-start", type=int, default=160)
     parser.add_argument("--window", type=int, default=100)
     parser.add_argument("--r-pc", type=float, default=0.56)
-    parser.add_argument("--layers", type=int, default=4)
+    parser.add_argument("--layers", type=int, default=5)
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--regularization", type=float, default=0.01)
     parser.add_argument(
+        "--backend",
+        choices=["auto", "numpy", "torch"],
+        default="auto",
+        help="Training backend. auto uses torch+CUDA when available, otherwise NumPy.",
+    )
+    parser.add_argument("--device", default="cuda", help="Torch device, e.g. cuda or cpu.")
+    parser.add_argument("--torch-epochs", type=int, default=1000)
+    parser.add_argument("--torch-lr", type=float, default=0.01)
+    parser.add_argument(
         "--edge-epochs",
         type=int,
-        default=2,
+        default=30,
         help="Fine-tuning epochs for edge-specific weights after relation-level pretraining.",
     )
     parser.add_argument(
         "--max-trainable-edges",
         type=int,
-        default=80,
+        default=120,
         help="Maximum number of edge-specific weights to update; all other edges keep RFPA-prior weights.",
     )
     return parser.parse_args()
@@ -59,6 +69,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    backend = _resolve_backend(args.backend, args.device)
     graph = build_tep_graph()
     variables = tep_variable_nodes()
     targets = paper_targets()
@@ -82,25 +93,45 @@ def main() -> None:
         for fault_id in args.faults
     ]
     training_cases = make_training_cases_from_targets(case_results, targets)
-    relation_training_result = fit_gnn_parameters(
-        graph,
-        training_cases,
-        variables,
-        base_params,
-        epochs=args.epochs,
-        regularization=args.regularization,
-        max_trainable_edges=0,
-    )
-    edge_base_params = with_edge_weights_from_graph(graph, relation_training_result.params)
-    training_result = fit_gnn_parameters(
-        graph,
-        training_cases,
-        variables,
-        edge_base_params,
-        epochs=args.edge_epochs,
-        regularization=args.regularization,
-        max_trainable_edges=args.max_trainable_edges,
-    )
+    relation_training_result = None
+    if backend == "torch":
+        edge_base_params = initial_gnn_parameters_from_rfpa(
+            relations,
+            rfpa_params.distances,
+            rfpa_params.sigma,
+            layers=args.layers,
+            graph=graph,
+        )
+        training_result = fit_gnn_parameters_torch(
+            graph,
+            training_cases,
+            variables,
+            edge_base_params,
+            epochs=args.torch_epochs,
+            learning_rate=args.torch_lr,
+            regularization=args.regularization,
+            device=args.device,
+        )
+    else:
+        relation_training_result = fit_gnn_parameters(
+            graph,
+            training_cases,
+            variables,
+            base_params,
+            epochs=args.epochs,
+            regularization=args.regularization,
+            max_trainable_edges=0,
+        )
+        edge_base_params = with_edge_weights_from_graph(graph, relation_training_result.params)
+        training_result = fit_gnn_parameters(
+            graph,
+            training_cases,
+            variables,
+            edge_base_params,
+            epochs=args.edge_epochs,
+            regularization=args.regularization,
+            max_trainable_edges=args.max_trainable_edges,
+        )
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -127,8 +158,12 @@ def main() -> None:
             {
                 "base_loss": training_result.base_loss,
                 "final_loss": training_result.final_loss,
-                "relation_base_loss": relation_training_result.base_loss,
-                "relation_final_loss": relation_training_result.final_loss,
+                "backend": backend,
+                "device": args.device if backend == "torch" else "cpu",
+                "torch_epochs": args.torch_epochs if backend == "torch" else None,
+                "torch_lr": args.torch_lr if backend == "torch" else None,
+                "relation_base_loss": relation_training_result.base_loss if relation_training_result else None,
+                "relation_final_loss": relation_training_result.final_loss if relation_training_result else None,
                 "check_loss": gnn_ranking_loss(
                     graph,
                     training_cases,
@@ -141,6 +176,7 @@ def main() -> None:
                 "edge_weight_count": len(training_result.params.edge_weights or {}),
                 "edge_weights_file": "edge_weights.csv",
                 "max_trainable_edges": args.max_trainable_edges,
+                "evaluation": _evaluation_metrics(summary),
                 "cases": summary,
             },
             handle,
@@ -148,7 +184,7 @@ def main() -> None:
         )
 
     print(
-        f"GNN loss {training_result.base_loss:.6f} -> {training_result.final_loss:.6f}; "
+        f"GNN({backend}) loss {training_result.base_loss:.6f} -> {training_result.final_loss:.6f}; "
         f"wrote outputs to {output_dir.resolve()}"
     )
     for row in summary:
@@ -175,6 +211,7 @@ def _case_summary(
     return {
         "fault_id": fault_id,
         "description": target.description,
+        "label_source": target.label_source,
         "expected_variables": target.root_variables,
         "expected_physical": target.physical_roots,
         "top_variable": variable_rank[0][0] if variable_rank else None,
@@ -222,6 +259,46 @@ def _split_edge_key(key: str) -> tuple[str, str, str]:
 
 def _rank_positions(rows: list[tuple[str, float]]) -> dict[str, int]:
     return {node: index for index, (node, _) in enumerate(rows, start=1)}
+
+
+def _evaluation_metrics(cases: list[dict[str, object]]) -> dict[str, int]:
+    metrics = {
+        "case_count": len(cases),
+        "variable_top1": 0,
+        "variable_top3": 0,
+        "physical_top1": 0,
+        "physical_top3": 0,
+    }
+    for case in cases:
+        variable_ranks = _valid_ranks(case.get("expected_variable_ranks", {}))
+        physical_ranks = _valid_ranks(case.get("expected_physical_ranks", {}))
+        if variable_ranks:
+            best = min(variable_ranks)
+            metrics["variable_top1"] += int(best == 1)
+            metrics["variable_top3"] += int(best <= 3)
+        if physical_ranks:
+            best = min(physical_ranks)
+            metrics["physical_top1"] += int(best == 1)
+            metrics["physical_top3"] += int(best <= 3)
+    return metrics
+
+
+def _valid_ranks(value: object) -> list[int]:
+    if not isinstance(value, dict):
+        return []
+    return [rank for rank in value.values() if isinstance(rank, int)]
+
+
+def _resolve_backend(requested: str, device: str) -> str:
+    if requested != "auto":
+        return requested
+    try:
+        import torch
+    except ImportError:
+        return "numpy"
+    if device == "cuda" and not torch.cuda.is_available():
+        return "numpy"
+    return "torch"
 
 
 if __name__ == "__main__":

@@ -45,3 +45,10 @@
 - Edge-specific GNN output summary: relation loss `0.112113 -> 0.001886`, edge fine-tuning loss `0.025714 -> 0.007335`, 323 exported edge weights, 13 edge weights changed from relation priors.
 - Edge-specific GNN top results: IDV(1) `x4`/Stream 4, IDV(4) `x51`/Stream 12, IDV(6) `x1`/Stream 1, IDV(12) `x11`/Stream 14.
 - Verification: `pytest -q` passed with 35 tests; `python run_gnn_experiment.py --output-dir outputs_gnn_edge` completed and regenerated GNN outputs.
+- Confirmed the configured PyTorch environment at `E:\Anaconda3-2025.06-0-Windows-x86_64\envs\pytorch`: torch `2.8.0+cu128`, CUDA available, GPU `NVIDIA GeForce RTX 5070`.
+- Added optional PyTorch/GPU backend in `rootkgd/gnn.py` and `run_gnn_experiment.py`; default Python without torch still uses/skips the NumPy path.
+- Expanded TEP target definitions to cover IDV(1)..IDV(21), with weak-label source notes for IDV(16)..IDV(21).
+- Ran GPU 21-fault training with:
+  `E:\Anaconda3-2025.06-0-Windows-x86_64\envs\pytorch\python.exe run_gnn_experiment.py --backend torch --device cuda --torch-epochs 300 --output-dir outputs_gnn_torch_21`
+- GPU 21-fault result: loss `0.175948 -> 0.018298`, variable top-1 `18/21`, variable top-3 `19/21`, physical top-1 `19/21`, physical top-3 `20/21`.
+- IDV(21) was not recovered under the external Stream-4 weak label; model ranked `x50`/Condenser and placed Stream 4 at physical rank 6.

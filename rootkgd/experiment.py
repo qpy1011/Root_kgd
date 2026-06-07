@@ -21,6 +21,7 @@ class PaperTarget:
     root_variables: tuple[str, ...]
     physical_roots: tuple[str, ...]
     description: str
+    label_source: str = "paper"
 
 
 @dataclass(frozen=True)
@@ -41,11 +42,32 @@ def paper_targets() -> dict[int, PaperTarget]:
             physical_roots=("Stream 4",),
             description="A/C feed ratio step change in stream 4.",
         ),
+        2: PaperTarget(
+            fault_id=2,
+            root_variables=("x24",),
+            physical_roots=("Stream 4",),
+            description="B composition step change in stream 4, with A/C ratio constant.",
+            label_source="TEP disturbance table + PIKG approximation",
+        ),
+        3: PaperTarget(
+            fault_id=3,
+            root_variables=("x2", "x42"),
+            physical_roots=("Stream 2",),
+            description="D feed temperature step change in stream 2.",
+            label_source="TEP disturbance table + closest observable flow variables",
+        ),
         4: PaperTarget(
             fault_id=4,
             root_variables=("x51",),
             physical_roots=("Stream 12", "Reactor"),
             description="Reactor cooling-water inlet temperature step change.",
+        ),
+        5: PaperTarget(
+            fault_id=5,
+            root_variables=("x22", "x52"),
+            physical_roots=("Stream 13", "Condenser"),
+            description="Condenser cooling-water inlet temperature step change.",
+            label_source="TEP disturbance table + closest observable cooling-water variables",
         ),
         6: PaperTarget(
             fault_id=6,
@@ -53,11 +75,109 @@ def paper_targets() -> dict[int, PaperTarget]:
             physical_roots=("Stream 1",),
             description="A feed loss in stream 1.",
         ),
+        7: PaperTarget(
+            fault_id=7,
+            root_variables=("x4", "x45"),
+            physical_roots=("Stream 4",),
+            description="C header pressure loss / reduced availability in stream 4.",
+            label_source="TEP disturbance table + closest observable stream-4 variables",
+        ),
+        8: PaperTarget(
+            fault_id=8,
+            root_variables=("x23", "x24", "x25"),
+            physical_roots=("Stream 4",),
+            description="A, B, C feed composition random variation in stream 4.",
+            label_source="TEP disturbance table + reactor-feed composition variables",
+        ),
+        9: PaperTarget(
+            fault_id=9,
+            root_variables=("x2", "x42"),
+            physical_roots=("Stream 2",),
+            description="D feed temperature random variation in stream 2.",
+            label_source="TEP disturbance table + closest observable flow variables",
+        ),
+        10: PaperTarget(
+            fault_id=10,
+            root_variables=("x25",),
+            physical_roots=("Stream 4",),
+            description="C feed temperature random variation in stream 4.",
+            label_source="TEP disturbance table + closest observable component variable",
+        ),
+        11: PaperTarget(
+            fault_id=11,
+            root_variables=("x21", "x51"),
+            physical_roots=("Stream 12", "Reactor"),
+            description="Reactor cooling-water inlet temperature random variation.",
+            label_source="TEP disturbance table + cooling-water variables",
+        ),
         12: PaperTarget(
             fault_id=12,
             root_variables=("x11",),
             physical_roots=("Stream 14", "Condenser", "Separator"),
             description="Condenser cooling-water inlet temperature random variation.",
+        ),
+        13: PaperTarget(
+            fault_id=13,
+            root_variables=("x9",),
+            physical_roots=("Reactor",),
+            description="Reaction kinetics slow drift.",
+            label_source="TEP disturbance table + reactor state approximation",
+        ),
+        14: PaperTarget(
+            fault_id=14,
+            root_variables=("x51",),
+            physical_roots=("Stream 12", "Reactor"),
+            description="Reactor cooling-water valve sticking.",
+            label_source="TEP disturbance table + XMV(10)",
+        ),
+        15: PaperTarget(
+            fault_id=15,
+            root_variables=("x52",),
+            physical_roots=("Stream 13", "Condenser"),
+            description="Condenser cooling-water valve sticking.",
+            label_source="TEP disturbance table + XMV(11)",
+        ),
+        16: PaperTarget(
+            fault_id=16,
+            root_variables=("x19", "x50"),
+            physical_roots=("Stripper Steam", "Stripper"),
+            description="Unknown disturbance; source code maps it to stripper heat-transfer / steam-side random walk.",
+            label_source="weak label from teprob.f TESUB8(9)",
+        ),
+        17: PaperTarget(
+            fault_id=17,
+            root_variables=("x21", "x51"),
+            physical_roots=("Stream 12", "Reactor"),
+            description="Unknown disturbance; source code maps it to reactor cooling heat-transfer random walk.",
+            label_source="weak label from teprob.f TESUB8(10)",
+        ),
+        18: PaperTarget(
+            fault_id=18,
+            root_variables=("x22", "x52"),
+            physical_roots=("Stream 13", "Condenser"),
+            description="Unknown disturbance; source code maps it to separator/condenser cooling heat-transfer random walk.",
+            label_source="weak label from teprob.f TESUB8(11)",
+        ),
+        19: PaperTarget(
+            fault_id=19,
+            root_variables=("x46", "x48", "x49", "x50"),
+            physical_roots=("Compressor", "Separator", "Stripper", "Stripper Steam"),
+            description="Unknown disturbance; source code applies valve stiction to XMV(5), XMV(7), XMV(8), and XMV(9).",
+            label_source="weak label from teprob.f IVST mappings",
+        ),
+        20: PaperTarget(
+            fault_id=20,
+            root_variables=("x5", "x46"),
+            physical_roots=("Stream 8", "Compressor"),
+            description="Unknown disturbance; source code maps it to stream-8/recycle flow random walk.",
+            label_source="weak label from teprob.f TESUB8(12)",
+        ),
+        21: PaperTarget(
+            fault_id=21,
+            root_variables=("x4", "x45"),
+            physical_roots=("Stream 4",),
+            description="Stream-4 valve position held constant at steady-state position.",
+            label_source="weak label from external TEP 21-fault convention",
         ),
     }
 
@@ -180,6 +300,7 @@ def _case_summary(result: CaseResult, target: PaperTarget | None) -> dict[str, o
     return {
         "fault_id": result.fault_id,
         "description": target.description,
+        "label_source": target.label_source,
         "n_components": result.n_components,
         "expected_variables": target.root_variables,
         "expected_physical": target.physical_roots,

@@ -6,6 +6,7 @@ from rootkgd.gnn import (
     GnnTrainingCase,
     edge_key,
     fit_gnn_parameters,
+    fit_gnn_parameters_torch,
     gnn_propagate,
     gnn_ranking_loss,
     gnn_root_scores,
@@ -246,6 +247,27 @@ def test_run_gnn_experiment_exports_edge_weights(tmp_path) -> None:
     assert "a,State,c,a|State|c,0.1" in content
 
 
+def test_run_gnn_experiment_evaluation_metrics_count_best_target_ranks() -> None:
+    cases = [
+        {
+            "expected_variable_ranks": {"x1": 1, "x2": 3},
+            "expected_physical_ranks": {"Stream 1": 2},
+        },
+        {
+            "expected_variable_ranks": {"x3": 4},
+            "expected_physical_ranks": {"Stream 2": None},
+        },
+    ]
+
+    metrics = run_gnn_experiment._evaluation_metrics(cases)
+
+    assert metrics["case_count"] == 2
+    assert metrics["variable_top1"] == 1
+    assert metrics["variable_top3"] == 1
+    assert metrics["physical_top1"] == 0
+    assert metrics["physical_top3"] == 1
+
+
 def test_gnn_ranking_loss_penalizes_each_positive_node() -> None:
     graph = KnowledgeGraph()
     for node in ("x1", "x2", "x3"):
@@ -265,3 +287,42 @@ def test_gnn_ranking_loss_penalizes_each_positive_node() -> None:
     loss = gnn_ranking_loss(graph, [case], ["x1", "x2", "x3"], params)
 
     assert loss > 0.0
+
+
+def test_torch_fit_matches_basic_ranking_behavior_when_torch_available() -> None:
+    pytest = __import__("pytest")
+    torch = pytest.importorskip("torch")
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    graph = KnowledgeGraph()
+    for node in ("x1", "x2", "x3"):
+        graph.add_node(node, "variable")
+    graph.add_edge("x1", "Useful", "x2")
+    graph.add_edge("x3", "Distractor", "x2")
+    base = GnnParameters(
+        relation_weights={"Useful": 0.2, "Distractor": 0.8},
+        edge_weights={
+            edge_key("x1", "Useful", "x2"): 0.2,
+            edge_key("x3", "Distractor", "x2"): 0.8,
+        },
+        self_weight=0.0,
+        layers=1,
+    )
+    case = GnnTrainingCase(
+        name="torch-synthetic",
+        contributions={"x1": 0.2, "x2": 1.0, "x3": 0.2},
+        positive_nodes=("x1",),
+    )
+
+    result = fit_gnn_parameters_torch(
+        graph,
+        [case],
+        ["x1", "x2", "x3"],
+        base,
+        epochs=20,
+        learning_rate=0.1,
+        regularization=0.0,
+        device=device,
+    )
+
+    assert result.final_loss < result.base_loss
+    assert result.params.edge_weights[edge_key("x1", "Useful", "x2")] > base.edge_weights[edge_key("x1", "Useful", "x2")]

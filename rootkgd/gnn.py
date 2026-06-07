@@ -214,6 +214,109 @@ def fit_gnn_parameters(
     )
 
 
+def fit_gnn_parameters_torch(
+    graph: KnowledgeGraph,
+    cases: Iterable[GnnTrainingCase],
+    variable_nodes: list[str],
+    base_params: GnnParameters,
+    epochs: int = 300,
+    learning_rate: float = 0.05,
+    regularization: float = 0.01,
+    device: str = "cuda",
+    margin: float = 0.05,
+) -> GnnTrainingResult:
+    try:
+        import torch
+        import torch.nn.functional as functional
+    except ImportError as exc:
+        raise RuntimeError(
+            "PyTorch is required for GPU GNN training. Run with the configured pytorch environment."
+        ) from exc
+
+    if device == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA was requested, but torch.cuda.is_available() is false.")
+
+    case_list = list(cases)
+    if not case_list:
+        return GnnTrainingResult(params=base_params, base_loss=0.0, final_loss=0.0, history=[0.0])
+
+    if base_params.edge_weights is None:
+        base_params = with_edge_weights_from_graph(graph, base_params)
+
+    torch_device = torch.device(device)
+    node_names = list(graph.nodes)
+    node_index = {node: index for index, node in enumerate(node_names)}
+    candidate_nodes = node_names
+    candidate_indices = torch.tensor([node_index[node] for node in candidate_nodes], dtype=torch.long, device=torch_device)
+    variable_indices = torch.tensor([node_index[node] for node in variable_nodes], dtype=torch.long, device=torch_device)
+
+    edge_keys = [edge_key(triple.head, triple.relation, triple.tail) for triple in graph.triples]
+    edge_heads = torch.tensor([node_index[triple.head] for triple in graph.triples], dtype=torch.long, device=torch_device)
+    edge_tails = torch.tensor([node_index[triple.tail] for triple in graph.triples], dtype=torch.long, device=torch_device)
+    base_edge_weights = torch.tensor(
+        [float((base_params.edge_weights or {}).get(key, relation_prior_for_edge_key(key, base_params.relation_weights))) for key in edge_keys],
+        dtype=torch.float32,
+        device=torch_device,
+    )
+    relation_priors = torch.tensor(
+        [relation_prior_for_edge_key(key, base_params.relation_weights) for key in edge_keys],
+        dtype=torch.float32,
+        device=torch_device,
+    )
+    initial_raw = _torch_inverse_sigmoid(torch.clamp(base_edge_weights / 2.0, 1e-5, 1.0 - 1e-5))
+    raw_weights = torch.nn.Parameter(initial_raw)
+    optimizer = torch.optim.Adam([raw_weights], lr=learning_rate)
+
+    prepared_cases = [
+        _prepare_torch_case(case, variable_nodes, candidate_nodes, node_index, torch_device)
+        for case in case_list
+        if any(node in node_index for node in case.positive_nodes)
+    ]
+    if not prepared_cases:
+        return GnnTrainingResult(params=base_params, base_loss=0.0, final_loss=0.0, history=[0.0])
+
+    base_loss = gnn_ranking_loss(graph, case_list, variable_nodes, base_params, margin=margin, candidates=candidate_nodes)
+    history: list[float] = []
+    for _ in range(max(0, epochs)):
+        optimizer.zero_grad()
+        ranking_loss, weights = _torch_ranking_loss(
+            raw_weights,
+            graph_node_count=len(node_names),
+            candidate_indices=candidate_indices,
+            variable_indices=variable_indices,
+            edge_heads=edge_heads,
+            edge_tails=edge_tails,
+            prepared_cases=prepared_cases,
+            layers=base_params.layers,
+            self_weight=base_params.self_weight,
+            margin=margin,
+            torch_module=torch,
+            functional=functional,
+        )
+        penalty = torch.mean((weights - base_edge_weights) ** 2)
+        penalty = penalty + 0.25 * torch.mean((weights - relation_priors) ** 2)
+        loss = ranking_loss + regularization * penalty
+        loss.backward()
+        optimizer.step()
+        history.append(float(ranking_loss.detach().cpu()))
+
+    final_weights = (2.0 * torch.sigmoid(raw_weights)).detach().cpu().numpy()
+    edge_weight_map = {key: float(weight) for key, weight in zip(edge_keys, final_weights)}
+    params = GnnParameters(
+        relation_weights=_average_relation_weights(graph, edge_weight_map),
+        edge_weights=edge_weight_map,
+        self_weight=base_params.self_weight,
+        layers=base_params.layers,
+    )
+    final_loss = gnn_ranking_loss(graph, case_list, variable_nodes, params, margin=margin, candidates=candidate_nodes)
+    return GnnTrainingResult(
+        params=params,
+        base_loss=base_loss,
+        final_loss=final_loss,
+        history=history or [base_loss],
+    )
+
+
 def initial_gnn_parameters_from_rfpa(
     relations: Iterable[str],
     distances: dict[str, float],
@@ -387,7 +490,7 @@ def grid_search_parameters(
 
     for values in product(weight_values, repeat=len(relation_list)):
         params = GnnParameters(
-            relation_weights=dict(zip(relation_list, map(float, values), strict=True)),
+            relation_weights=dict(zip(relation_list, map(float, values))),
             layers=layers,
         )
         loss = gnn_ranking_loss(graph, case_list, variable_nodes, params)
@@ -463,6 +566,105 @@ def _replace_weight(params: GnnParameters, key: str, value: float, *, use_edge_w
         self_weight=params.self_weight,
         layers=params.layers,
     )
+
+
+def _prepare_torch_case(
+    case: GnnTrainingCase,
+    variable_nodes: list[str],
+    candidate_nodes: list[str],
+    node_index: dict[str, int],
+    device: object,
+) -> dict[str, object]:
+    import torch
+
+    physical_initial = max(case.contributions.values(), default=1.0)
+    initial = [
+        float(case.contributions.get(candidate, physical_initial))
+        for candidate in candidate_nodes
+    ]
+    target = [
+        float(case.contributions.get(variable, 0.0))
+        for variable in variable_nodes
+    ]
+    positive_candidate_positions = [
+        index
+        for index, candidate in enumerate(candidate_nodes)
+        if candidate in set(case.positive_nodes)
+    ]
+    return {
+        "initial": torch.tensor(initial, dtype=torch.float32, device=device),
+        "target": torch.tensor(target, dtype=torch.float32, device=device),
+        "positive_positions": torch.tensor(positive_candidate_positions, dtype=torch.long, device=device),
+    }
+
+
+def _torch_ranking_loss(
+    raw_weights: object,
+    *,
+    graph_node_count: int,
+    candidate_indices: object,
+    variable_indices: object,
+    edge_heads: object,
+    edge_tails: object,
+    prepared_cases: list[dict[str, object]],
+    layers: int,
+    self_weight: float,
+    margin: float,
+    torch_module: object,
+    functional: object,
+) -> tuple[object, object]:
+    torch = torch_module
+    weights = 2.0 * torch.sigmoid(raw_weights)
+    adjacency = torch.zeros((graph_node_count, graph_node_count), dtype=weights.dtype, device=weights.device)
+    adjacency.index_put_((edge_heads, edge_tails), weights, accumulate=True)
+    losses = []
+    candidate_count = int(candidate_indices.numel())
+    row_indices = torch.arange(candidate_count, device=weights.device)
+
+    for case in prepared_cases:
+        positives = case["positive_positions"]
+        if int(positives.numel()) == 0:
+            continue
+        frontier = torch.zeros((candidate_count, graph_node_count), dtype=weights.dtype, device=weights.device)
+        frontier[row_indices, candidate_indices] = case["initial"]
+        scores = frontier.clone()
+        for _ in range(max(0, layers)):
+            next_frontier = frontier @ adjacency
+            if self_weight:
+                next_frontier = next_frontier + frontier * float(self_weight)
+            scores = scores + next_frontier
+            frontier = next_frontier
+        vectors = scores.index_select(1, variable_indices)
+        target = case["target"].reshape(1, -1)
+        similarities = functional.cosine_similarity(vectors, target.expand_as(vectors), dim=1, eps=1e-12)
+        negative_mask = torch.ones(candidate_count, dtype=torch.bool, device=weights.device)
+        negative_mask[positives] = False
+        if bool(negative_mask.any()):
+            hardest_negative = similarities[negative_mask].max()
+            losses.append(torch.relu(margin + hardest_negative - similarities[positives]))
+        else:
+            losses.append(1.0 - similarities[positives])
+
+    if not losses:
+        return torch.zeros((), dtype=weights.dtype, device=weights.device), weights
+    return torch.cat([loss.reshape(-1) for loss in losses]).mean(), weights
+
+
+def _torch_inverse_sigmoid(value: object) -> object:
+    import torch
+
+    return torch.log(value / (1.0 - value))
+
+
+def _average_relation_weights(graph: KnowledgeGraph, edge_weights: dict[str, float]) -> dict[str, float]:
+    grouped: dict[str, list[float]] = {}
+    for triple in graph.triples:
+        key = edge_key(triple.head, triple.relation, triple.tail)
+        grouped.setdefault(triple.relation, []).append(edge_weights[key])
+    return {
+        relation: float(np.mean(weights))
+        for relation, weights in grouped.items()
+    }
 
 
 def _edge_priority(key: str, seeds: set[str], graph: KnowledgeGraph) -> tuple[int, int, str]:
