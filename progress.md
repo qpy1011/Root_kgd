@@ -35,3 +35,13 @@
 - Added `elevator_KG/elevator_kg_builder.py` and generated `elevator_kg_nodes.csv`, `elevator_kg_edges.csv`, `neo4j_import.cypher`, `elevator_kg.json`, `elevator_kg_summary.json`, `elevator_kg_schema.md`, `elevator_kg_sources.md`, and `README.md`.
 - Elevator KG export summary: 3,572 nodes and 20,645 edges. It includes systems/components, fault categories, phenomena, actions, standards/rules, local work orders, elevator assets, organizations, locations, raw fault texts, aggregate report causes, fault locations, and replacement part types.
 - Verification: `pytest tests/test_elevator_kg.py -q` passed with 4 tests; `pytest -q` passed with 28 tests.
+
+## 2026-06-07
+
+- Upgraded the GNN from relation-only propagation weights to edge-specific weights.
+- Added edge keys in the form `head|relation|tail`, edge-weight propagation, full edge-weight initialization from the TEP graph, focused trainable-edge selection, and hard-negative training candidates.
+- Updated `run_gnn_experiment.py` to use two-stage training: relation-level pretraining first, then edge-specific fine-tuning; it now writes `outputs_gnn_edge/edge_weights.csv`.
+- A naive all-edge coordinate search with current defaults timed out at 180s and 240s; the two-stage/focused-edge training completed in about 67s.
+- Edge-specific GNN output summary: relation loss `0.112113 -> 0.001886`, edge fine-tuning loss `0.025714 -> 0.007335`, 323 exported edge weights, 13 edge weights changed from relation priors.
+- Edge-specific GNN top results: IDV(1) `x4`/Stream 4, IDV(4) `x51`/Stream 12, IDV(6) `x1`/Stream 1, IDV(12) `x11`/Stream 14.
+- Verification: `pytest -q` passed with 35 tests; `python run_gnn_experiment.py --output-dir outputs_gnn_edge` completed and regenerated GNN outputs.

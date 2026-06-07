@@ -1,0 +1,324 @@
+head,relation,tail,edge_key,weight
+A,Contained by,Stream 1,A|Contained by|Stream 1,0.606530659713
+A,Contained by,Stream 14,A|Contained by|Stream 14,0.606530659713
+A,Contained by,Stream 4,A|Contained by|Stream 4,0.606530659713
+A,Contained by,Stream 5,A|Contained by|Stream 5,0.606530659713
+A,Contained by,Stream 6,A|Contained by|Stream 6,0.606530659713
+A,Contained by,Stream 7,A|Contained by|Stream 7,0.606530659713
+A,Contained by,Stream 8,A|Contained by|Stream 8,0.606530659713
+A,Contained by,Stream 9,A|Contained by|Stream 9,0.606530659713
+A,Generate,F,A|Generate|F,0.135335283237
+A,Generate,G,A|Generate|G,0.135335283237
+A,Generate,H,A|Generate|H,0.135335283237
+A,State,x23,A|State|x23,0.904837418036
+A,State,x29,A|State|x29,0.904837418036
+B,Contained by,Stream 14,B|Contained by|Stream 14,0.606530659713
+B,Contained by,Stream 4,B|Contained by|Stream 4,0.606530659713
+B,Contained by,Stream 5,B|Contained by|Stream 5,0.606530659713
+B,Contained by,Stream 6,B|Contained by|Stream 6,0.606530659713
+B,Contained by,Stream 7,B|Contained by|Stream 7,0.606530659713
+B,Contained by,Stream 8,B|Contained by|Stream 8,0.606530659713
+B,Contained by,Stream 9,B|Contained by|Stream 9,0.606530659713
+B,State,x24,B|State|x24,0.904837418036
+B,State,x30,B|State|x30,0.904837418036
+Compressor,Output,Stream 6,Compressor|Output|Stream 6,0.740818220682
+Compressor,State,x20,Compressor|State|x20,1
+Compressor,State,x46,Compressor|State|x46,0.904837418036
+Condenser,Output,Stream 14,Condenser|Output|Stream 14,0.740818220682
+Condenser,State,x22,Condenser|State|x22,0.904837418036
+Condenser,State,x52,Condenser|State|x52,0.904837418036
+Cooling Water,Contained by,Stream 12,Cooling Water|Contained by|Stream 12,0.606530659713
+Cooling Water,Contained by,Stream 13,Cooling Water|Contained by|Stream 13,0.606530659713
+C,Contained by,Stream 14,C|Contained by|Stream 14,0.606530659713
+C,Contained by,Stream 4,C|Contained by|Stream 4,0.606530659713
+C,Contained by,Stream 5,C|Contained by|Stream 5,0.606530659713
+C,Contained by,Stream 6,C|Contained by|Stream 6,0.606530659713
+C,Contained by,Stream 7,C|Contained by|Stream 7,0.606530659713
+C,Contained by,Stream 8,C|Contained by|Stream 8,0.606530659713
+C,Contained by,Stream 9,C|Contained by|Stream 9,0.606530659713
+C,Generate,G,C|Generate|G,0.135335283237
+C,Generate,H,C|Generate|H,0.135335283237
+C,State,x25,C|State|x25,0.904837418036
+C,State,x31,C|State|x31,0.904837418036
+D,Contained by,Stream 10,D|Contained by|Stream 10,0.606530659713
+D,Contained by,Stream 11,D|Contained by|Stream 11,0.606530659713
+D,Contained by,Stream 14,D|Contained by|Stream 14,0.606530659713
+D,Contained by,Stream 2,D|Contained by|Stream 2,0.606530659713
+D,Contained by,Stream 5,D|Contained by|Stream 5,0.606530659713
+D,Contained by,Stream 6,D|Contained by|Stream 6,0.606530659713
+D,Contained by,Stream 7,D|Contained by|Stream 7,0.606530659713
+D,Contained by,Stream 8,D|Contained by|Stream 8,0.606530659713
+D,Contained by,Stream 9,D|Contained by|Stream 9,0.606530659713
+D,Generate,F,D|Generate|F,0.135335283237
+D,Generate,G,D|Generate|G,0.135335283237
+D,State,x26,D|State|x26,0.904837418036
+D,State,x32,D|State|x32,0.904837418036
+D,State,x37,D|State|x37,0.904837418036
+E,Contained by,Stream 10,E|Contained by|Stream 10,0.606530659713
+E,Contained by,Stream 11,E|Contained by|Stream 11,0.606530659713
+E,Contained by,Stream 14,E|Contained by|Stream 14,0.606530659713
+E,Contained by,Stream 3,E|Contained by|Stream 3,0.606530659713
+E,Contained by,Stream 5,E|Contained by|Stream 5,0.606530659713
+E,Contained by,Stream 6,E|Contained by|Stream 6,0.606530659713
+E,Contained by,Stream 7,E|Contained by|Stream 7,0.606530659713
+E,Contained by,Stream 8,E|Contained by|Stream 8,0.606530659713
+E,Contained by,Stream 9,E|Contained by|Stream 9,0.606530659713
+E,Generate,F,E|Generate|F,0.135335283237
+E,Generate,H,E|Generate|H,0.135335283237
+E,State,x27,E|State|x27,0.904837418036
+E,State,x33,E|State|x33,0.904837418036
+E,State,x38,E|State|x38,0.904837418036
+F,Contained by,Stream 10,F|Contained by|Stream 10,0.606530659713
+F,Contained by,Stream 11,F|Contained by|Stream 11,0.606530659713
+F,Contained by,Stream 14,F|Contained by|Stream 14,0.606530659713
+F,Contained by,Stream 5,F|Contained by|Stream 5,0.606530659713
+F,Contained by,Stream 6,F|Contained by|Stream 6,0.606530659713
+F,Contained by,Stream 7,F|Contained by|Stream 7,0.606530659713
+F,Contained by,Stream 8,F|Contained by|Stream 8,0.606530659713
+F,Contained by,Stream 9,F|Contained by|Stream 9,0.606530659713
+F,State,x28,F|State|x28,0.904837418036
+F,State,x34,F|State|x34,0.904837418036
+F,State,x39,F|State|x39,0.904837418036
+G,Contained by,Stream 10,G|Contained by|Stream 10,0.606530659713
+G,Contained by,Stream 11,G|Contained by|Stream 11,0.606530659713
+G,Contained by,Stream 14,G|Contained by|Stream 14,0.606530659713
+G,Contained by,Stream 5,G|Contained by|Stream 5,0.606530659713
+G,Contained by,Stream 7,G|Contained by|Stream 7,0.606530659713
+G,Contained by,Stream 8,G|Contained by|Stream 8,0.606530659713
+G,Contained by,Stream 9,G|Contained by|Stream 9,0.606530659713
+G,State,x35,G|State|x35,0.904837418036
+G,State,x40,G|State|x40,0.904837418036
+H,Contained by,Stream 10,H|Contained by|Stream 10,0.606530659713
+H,Contained by,Stream 11,H|Contained by|Stream 11,0.606530659713
+H,Contained by,Stream 14,H|Contained by|Stream 14,0.606530659713
+H,Contained by,Stream 5,H|Contained by|Stream 5,0.606530659713
+H,Contained by,Stream 7,H|Contained by|Stream 7,0.606530659713
+H,Contained by,Stream 8,H|Contained by|Stream 8,0.606530659713
+H,Contained by,Stream 9,H|Contained by|Stream 9,0.606530659713
+H,State,x36,H|State|x36,0.904837418036
+H,State,x41,H|State|x41,0.904837418036
+Reactor,Output,Stream 7,Reactor|Output|Stream 7,0.740818220682
+Reactor,State,x21,Reactor|State|x21,0.904837418036
+Reactor,State,x51,Reactor|State|x51,0.904837418036
+Reactor,State,x7,Reactor|State|x7,0.904837418036
+Reactor,State,x8,Reactor|State|x8,0.904837418036
+Reactor,State,x9,Reactor|State|x9,0.904837418036
+Separator,Output,Stream 10,Separator|Output|Stream 10,0.740818220682
+Separator,Output,Stream 8,Separator|Output|Stream 8,0.740818220682
+Separator,Output,Stream 9,Separator|Output|Stream 9,0.740818220682
+Separator,State,x11,Separator|State|x11,0.904837418036
+Separator,State,x12,Separator|State|x12,0.904837418036
+Separator,State,x13,Separator|State|x13,0.904837418036
+Separator,State,x48,Separator|State|x48,0.904837418036
+Steam,Contained by,Stripper Steam,Steam|Contained by|Stripper Steam,0.606530659713
+Stream 10,Contain,D,Stream 10|Contain|D,0.606530659713
+Stream 10,Contain,E,Stream 10|Contain|E,0.606530659713
+Stream 10,Contain,F,Stream 10|Contain|F,0.606530659713
+Stream 10,Contain,G,Stream 10|Contain|G,0.606530659713
+Stream 10,Contain,H,Stream 10|Contain|H,0.606530659713
+Stream 10,Output,Stripper,Stream 10|Output|Stripper,0.740818220682
+Stream 10,State,x14,Stream 10|State|x14,0.904837418036
+Stream 10,State,x48,Stream 10|State|x48,0.904837418036
+Stream 11,Contain,D,Stream 11|Contain|D,0.606530659713
+Stream 11,Contain,E,Stream 11|Contain|E,0.606530659713
+Stream 11,Contain,F,Stream 11|Contain|F,0.606530659713
+Stream 11,Contain,G,Stream 11|Contain|G,0.606530659713
+Stream 11,Contain,H,Stream 11|Contain|H,0.606530659713
+Stream 11,State,x17,Stream 11|State|x17,0.904837418036
+Stream 11,State,x37,Stream 11|State|x37,0.904837418036
+Stream 11,State,x38,Stream 11|State|x38,0.904837418036
+Stream 11,State,x39,Stream 11|State|x39,0.904837418036
+Stream 11,State,x40,Stream 11|State|x40,0.904837418036
+Stream 11,State,x41,Stream 11|State|x41,0.904837418036
+Stream 11,State,x49,Stream 11|State|x49,0.904837418036
+Stream 12,Contain,Cooling Water,Stream 12|Contain|Cooling Water,0.606530659713
+Stream 12,Output,Reactor,Stream 12|Output|Reactor,0.740818220682
+Stream 12,State,x21,Stream 12|State|x21,0.904837418036
+Stream 12,State,x51,Stream 12|State|x51,0.5
+Stream 13,Contain,Cooling Water,Stream 13|Contain|Cooling Water,0.606530659713
+Stream 13,Output,Condenser,Stream 13|Output|Condenser,0.740818220682
+Stream 13,State,x22,Stream 13|State|x22,0.904837418036
+Stream 13,State,x52,Stream 13|State|x52,0.904837418036
+Stream 14,Contain,A,Stream 14|Contain|A,0.606530659713
+Stream 14,Contain,B,Stream 14|Contain|B,0.606530659713
+Stream 14,Contain,C,Stream 14|Contain|C,0.606530659713
+Stream 14,Contain,D,Stream 14|Contain|D,0.606530659713
+Stream 14,Contain,E,Stream 14|Contain|E,0.606530659713
+Stream 14,Contain,F,Stream 14|Contain|F,0.606530659713
+Stream 14,Contain,G,Stream 14|Contain|G,0.606530659713
+Stream 14,Contain,H,Stream 14|Contain|H,0.606530659713
+Stream 14,Output,Separator,Stream 14|Output|Separator,0.740818220682
+Stream 14,State,x11,Stream 14|State|x11,0.904837418036
+Stream 1,Contain,A,Stream 1|Contain|A,0.606530659713
+Stream 1,Output,Stream 6,Stream 1|Output|Stream 6,0.740818220682
+Stream 1,State,x1,Stream 1|State|x1,1.5
+Stream 1,State,x44,Stream 1|State|x44,1
+Stream 2,Contain,D,Stream 2|Contain|D,0.606530659713
+Stream 2,Output,Stream 6,Stream 2|Output|Stream 6,0.740818220682
+Stream 2,State,x2,Stream 2|State|x2,0.904837418036
+Stream 2,State,x42,Stream 2|State|x42,0.904837418036
+Stream 3,Contain,E,Stream 3|Contain|E,0.606530659713
+Stream 3,Output,Stream 6,Stream 3|Output|Stream 6,0.740818220682
+Stream 3,State,x3,Stream 3|State|x3,0.904837418036
+Stream 3,State,x43,Stream 3|State|x43,0.904837418036
+Stream 4,Contain,A,Stream 4|Contain|A,0.606530659713
+Stream 4,Contain,B,Stream 4|Contain|B,0.606530659713
+Stream 4,Contain,C,Stream 4|Contain|C,0.606530659713
+Stream 4,Output,Stripper,Stream 4|Output|Stripper,0.740818220682
+Stream 4,State,x4,Stream 4|State|x4,0.904837418036
+Stream 4,State,x45,Stream 4|State|x45,0.904837418036
+Stream 5,Contain,A,Stream 5|Contain|A,0.606530659713
+Stream 5,Contain,B,Stream 5|Contain|B,0.606530659713
+Stream 5,Contain,C,Stream 5|Contain|C,0.606530659713
+Stream 5,Contain,D,Stream 5|Contain|D,0.606530659713
+Stream 5,Contain,E,Stream 5|Contain|E,0.606530659713
+Stream 5,Contain,F,Stream 5|Contain|F,0.606530659713
+Stream 5,Contain,G,Stream 5|Contain|G,0.606530659713
+Stream 5,Contain,H,Stream 5|Contain|H,0.606530659713
+Stream 5,Output,Stream 6,Stream 5|Output|Stream 6,0.740818220682
+Stream 6,Contain,A,Stream 6|Contain|A,0.606530659713
+Stream 6,Contain,B,Stream 6|Contain|B,0.606530659713
+Stream 6,Contain,C,Stream 6|Contain|C,0.606530659713
+Stream 6,Contain,D,Stream 6|Contain|D,0.606530659713
+Stream 6,Contain,E,Stream 6|Contain|E,0.606530659713
+Stream 6,Contain,F,Stream 6|Contain|F,0.606530659713
+Stream 6,Output,Reactor,Stream 6|Output|Reactor,0.740818220682
+Stream 6,State,x23,Stream 6|State|x23,0.904837418036
+Stream 6,State,x24,Stream 6|State|x24,0.904837418036
+Stream 6,State,x25,Stream 6|State|x25,0.904837418036
+Stream 6,State,x26,Stream 6|State|x26,0.904837418036
+Stream 6,State,x27,Stream 6|State|x27,0.904837418036
+Stream 6,State,x28,Stream 6|State|x28,0.904837418036
+Stream 6,State,x6,Stream 6|State|x6,0.904837418036
+Stream 7,Contain,A,Stream 7|Contain|A,0.606530659713
+Stream 7,Contain,B,Stream 7|Contain|B,0.606530659713
+Stream 7,Contain,C,Stream 7|Contain|C,0.606530659713
+Stream 7,Contain,D,Stream 7|Contain|D,0.606530659713
+Stream 7,Contain,E,Stream 7|Contain|E,0.606530659713
+Stream 7,Contain,F,Stream 7|Contain|F,0.606530659713
+Stream 7,Contain,G,Stream 7|Contain|G,0.606530659713
+Stream 7,Contain,H,Stream 7|Contain|H,0.606530659713
+Stream 7,Output,Condenser,Stream 7|Output|Condenser,0.740818220682
+Stream 8,Contain,A,Stream 8|Contain|A,0.606530659713
+Stream 8,Contain,B,Stream 8|Contain|B,0.606530659713
+Stream 8,Contain,C,Stream 8|Contain|C,0.606530659713
+Stream 8,Contain,D,Stream 8|Contain|D,0.606530659713
+Stream 8,Contain,E,Stream 8|Contain|E,0.606530659713
+Stream 8,Contain,F,Stream 8|Contain|F,0.606530659713
+Stream 8,Contain,G,Stream 8|Contain|G,0.606530659713
+Stream 8,Contain,H,Stream 8|Contain|H,0.606530659713
+Stream 8,Output,Compressor,Stream 8|Output|Compressor,0.740818220682
+Stream 8,Output,Stream 6,Stream 8|Output|Stream 6,0.740818220682
+Stream 8,State,x46,Stream 8|State|x46,0.904837418036
+Stream 8,State,x5,Stream 8|State|x5,0.904837418036
+Stream 9,Contain,A,Stream 9|Contain|A,0.606530659713
+Stream 9,Contain,B,Stream 9|Contain|B,0.606530659713
+Stream 9,Contain,C,Stream 9|Contain|C,0.606530659713
+Stream 9,Contain,D,Stream 9|Contain|D,0.606530659713
+Stream 9,Contain,E,Stream 9|Contain|E,0.606530659713
+Stream 9,Contain,F,Stream 9|Contain|F,0.606530659713
+Stream 9,Contain,G,Stream 9|Contain|G,0.606530659713
+Stream 9,Contain,H,Stream 9|Contain|H,0.606530659713
+Stream 9,State,x10,Stream 9|State|x10,0.904837418036
+Stream 9,State,x29,Stream 9|State|x29,0.904837418036
+Stream 9,State,x30,Stream 9|State|x30,0.904837418036
+Stream 9,State,x31,Stream 9|State|x31,0.904837418036
+Stream 9,State,x32,Stream 9|State|x32,0.904837418036
+Stream 9,State,x33,Stream 9|State|x33,0.904837418036
+Stream 9,State,x34,Stream 9|State|x34,0.904837418036
+Stream 9,State,x35,Stream 9|State|x35,0.904837418036
+Stream 9,State,x36,Stream 9|State|x36,0.904837418036
+Stream 9,State,x47,Stream 9|State|x47,0.904837418036
+Stripper Steam,Contain,Steam,Stripper Steam|Contain|Steam,0.606530659713
+Stripper Steam,Output,Stripper,Stripper Steam|Output|Stripper,0.740818220682
+Stripper Steam,State,x19,Stripper Steam|State|x19,0.904837418036
+Stripper Steam,State,x50,Stripper Steam|State|x50,0.904837418036
+Stripper,Output,Stream 11,Stripper|Output|Stream 11,0.740818220682
+Stripper,Output,Stream 5,Stripper|Output|Stream 5,0.740818220682
+Stripper,State,x15,Stripper|State|x15,0.904837418036
+Stripper,State,x16,Stripper|State|x16,0.904837418036
+Stripper,State,x18,Stripper|State|x18,0.904837418036
+Stripper,State,x19,Stripper|State|x19,0.904837418036
+Stripper,State,x49,Stripper|State|x49,0.904837418036
+Stripper,State,x50,Stripper|State|x50,0.904837418036
+x10,State of,Stream 9,x10|State of|Stream 9,0.904837418036
+x11,State of,Separator,x11|State of|Separator,0.904837418036
+x11,State of,Stream 14,x11|State of|Stream 14,0.904837418036
+x12,State of,Separator,x12|State of|Separator,0.904837418036
+x13,State of,Separator,x13|State of|Separator,0.904837418036
+x14,State of,Stream 10,x14|State of|Stream 10,0.904837418036
+x15,State of,Stripper,x15|State of|Stripper,0.904837418036
+x16,State of,Stripper,x16|State of|Stripper,0.904837418036
+x17,State of,Stream 11,x17|State of|Stream 11,0.904837418036
+x18,State of,Stripper,x18|State of|Stripper,0.904837418036
+x19,State of,Stripper,x19|State of|Stripper,0.904837418036
+x19,State of,Stripper Steam,x19|State of|Stripper Steam,0.904837418036
+x1,State of,Stream 1,x1|State of|Stream 1,0.904837418036
+x20,State of,Compressor,x20|State of|Compressor,0.904837418036
+x21,State of,Reactor,x21|State of|Reactor,0.904837418036
+x21,State of,Stream 12,x21|State of|Stream 12,0.904837418036
+x22,State of,Condenser,x22|State of|Condenser,0.904837418036
+x22,State of,Stream 13,x22|State of|Stream 13,0.904837418036
+x23,State of,A,x23|State of|A,0.904837418036
+x23,State of,Stream 6,x23|State of|Stream 6,0.904837418036
+x24,State of,B,x24|State of|B,0.904837418036
+x24,State of,Stream 6,x24|State of|Stream 6,0.904837418036
+x25,State of,C,x25|State of|C,0.904837418036
+x25,State of,Stream 6,x25|State of|Stream 6,0.904837418036
+x26,State of,D,x26|State of|D,0.904837418036
+x26,State of,Stream 6,x26|State of|Stream 6,0.904837418036
+x27,State of,E,x27|State of|E,0.904837418036
+x27,State of,Stream 6,x27|State of|Stream 6,0.904837418036
+x28,State of,F,x28|State of|F,0.904837418036
+x28,State of,Stream 6,x28|State of|Stream 6,0.904837418036
+x29,State of,A,x29|State of|A,0.904837418036
+x29,State of,Stream 9,x29|State of|Stream 9,0.904837418036
+x2,State of,Stream 2,x2|State of|Stream 2,0.904837418036
+x30,State of,B,x30|State of|B,0.904837418036
+x30,State of,Stream 9,x30|State of|Stream 9,0.904837418036
+x31,State of,C,x31|State of|C,0.904837418036
+x31,State of,Stream 9,x31|State of|Stream 9,0.904837418036
+x32,State of,D,x32|State of|D,0.904837418036
+x32,State of,Stream 9,x32|State of|Stream 9,0.904837418036
+x33,State of,E,x33|State of|E,0.904837418036
+x33,State of,Stream 9,x33|State of|Stream 9,0.904837418036
+x34,State of,F,x34|State of|F,0.904837418036
+x34,State of,Stream 9,x34|State of|Stream 9,0.904837418036
+x35,State of,G,x35|State of|G,0.904837418036
+x35,State of,Stream 9,x35|State of|Stream 9,0.904837418036
+x36,State of,H,x36|State of|H,0.904837418036
+x36,State of,Stream 9,x36|State of|Stream 9,0.904837418036
+x37,State of,D,x37|State of|D,0.904837418036
+x37,State of,Stream 11,x37|State of|Stream 11,0.904837418036
+x38,State of,E,x38|State of|E,0.904837418036
+x38,State of,Stream 11,x38|State of|Stream 11,0.904837418036
+x39,State of,F,x39|State of|F,0.904837418036
+x39,State of,Stream 11,x39|State of|Stream 11,0.904837418036
+x3,State of,Stream 3,x3|State of|Stream 3,0.904837418036
+x40,State of,G,x40|State of|G,0.904837418036
+x40,State of,Stream 11,x40|State of|Stream 11,0.904837418036
+x41,State of,H,x41|State of|H,0.904837418036
+x41,State of,Stream 11,x41|State of|Stream 11,0.904837418036
+x42,State of,Stream 2,x42|State of|Stream 2,0.904837418036
+x43,State of,Stream 3,x43|State of|Stream 3,0.904837418036
+x44,State of,Stream 1,x44|State of|Stream 1,0.904837418036
+x45,State of,Stream 4,x45|State of|Stream 4,0.904837418036
+x46,State of,Compressor,x46|State of|Compressor,0.904837418036
+x46,State of,Stream 8,x46|State of|Stream 8,0.904837418036
+x47,State of,Stream 9,x47|State of|Stream 9,0.904837418036
+x48,State of,Separator,x48|State of|Separator,0.904837418036
+x48,State of,Stream 10,x48|State of|Stream 10,0.904837418036
+x49,State of,Stream 11,x49|State of|Stream 11,0.904837418036
+x49,State of,Stripper,x49|State of|Stripper,0.904837418036
+x4,State of,Stream 4,x4|State of|Stream 4,0.904837418036
+x50,State of,Stripper,x50|State of|Stripper,0.904837418036
+x50,State of,Stripper Steam,x50|State of|Stripper Steam,0.904837418036
+x51,State of,Reactor,x51|State of|Reactor,0.904837418036
+x51,State of,Stream 12,x51|State of|Stream 12,0.904837418036
+x52,State of,Condenser,x52|State of|Condenser,0.904837418036
+x52,State of,Stream 13,x52|State of|Stream 13,0.904837418036
+x5,State of,Stream 8,x5|State of|Stream 8,0.904837418036
+x6,State of,Stream 6,x6|State of|Stream 6,0.904837418036
+x7,State of,Reactor,x7|State of|Reactor,0.904837418036
+x8,State of,Reactor,x8|State of|Reactor,0.904837418036
+x9,State of,Reactor,x9|State of|Reactor,0.904837418036

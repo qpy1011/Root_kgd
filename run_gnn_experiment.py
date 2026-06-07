@@ -12,6 +12,7 @@ from rootkgd.gnn import (
     gnn_root_scores,
     initial_gnn_parameters_from_rfpa,
     make_training_cases_from_targets,
+    with_edge_weights_from_graph,
 )
 from rootkgd.tep import build_tep_graph, tep_rfpa_parameters, tep_variable_nodes
 
@@ -38,9 +39,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--fault-start", type=int, default=160)
     parser.add_argument("--window", type=int, default=100)
     parser.add_argument("--r-pc", type=float, default=0.56)
-    parser.add_argument("--layers", type=int, default=6)
+    parser.add_argument("--layers", type=int, default=4)
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--regularization", type=float, default=0.01)
+    parser.add_argument(
+        "--edge-epochs",
+        type=int,
+        default=2,
+        help="Fine-tuning epochs for edge-specific weights after relation-level pretraining.",
+    )
+    parser.add_argument(
+        "--max-trainable-edges",
+        type=int,
+        default=80,
+        help="Maximum number of edge-specific weights to update; all other edges keep RFPA-prior weights.",
+    )
     return parser.parse_args()
 
 
@@ -69,13 +82,24 @@ def main() -> None:
         for fault_id in args.faults
     ]
     training_cases = make_training_cases_from_targets(case_results, targets)
-    training_result = fit_gnn_parameters(
+    relation_training_result = fit_gnn_parameters(
         graph,
         training_cases,
         variables,
         base_params,
         epochs=args.epochs,
         regularization=args.regularization,
+        max_trainable_edges=0,
+    )
+    edge_base_params = with_edge_weights_from_graph(graph, relation_training_result.params)
+    training_result = fit_gnn_parameters(
+        graph,
+        training_cases,
+        variables,
+        edge_base_params,
+        epochs=args.edge_epochs,
+        regularization=args.regularization,
+        max_trainable_edges=args.max_trainable_edges,
     )
 
     output_dir = Path(args.output_dir)
@@ -97,11 +121,14 @@ def main() -> None:
         summary.append(_case_summary(result.fault_id, targets.get(result.fault_id), variable_rank, physical_rank))
 
     _write_relation_weights(output_dir / "relation_weights.csv", training_result.params.relation_weights)
+    _write_edge_weights(output_dir / "edge_weights.csv", training_result.params.edge_weights or {})
     with (output_dir / "summary.json").open("w", encoding="utf-8") as handle:
         json.dump(
             {
                 "base_loss": training_result.base_loss,
                 "final_loss": training_result.final_loss,
+                "relation_base_loss": relation_training_result.base_loss,
+                "relation_final_loss": relation_training_result.final_loss,
                 "check_loss": gnn_ranking_loss(
                     graph,
                     training_cases,
@@ -111,6 +138,9 @@ def main() -> None:
                 "layers": training_result.params.layers,
                 "history": training_result.history,
                 "relation_weights": training_result.params.relation_weights,
+                "edge_weight_count": len(training_result.params.edge_weights or {}),
+                "edge_weights_file": "edge_weights.csv",
+                "max_trainable_edges": args.max_trainable_edges,
                 "cases": summary,
             },
             handle,
@@ -172,6 +202,22 @@ def _write_relation_weights(path: Path, weights: dict[str, float]) -> None:
         writer.writerow(["relation", "weight"])
         for relation, weight in sorted(weights.items()):
             writer.writerow([relation, f"{weight:.12g}"])
+
+
+def _write_edge_weights(path: Path, weights: dict[str, float]) -> None:
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(["head", "relation", "tail", "edge_key", "weight"])
+        for key, weight in sorted(weights.items()):
+            head, relation, tail = _split_edge_key(key)
+            writer.writerow([head, relation, tail, key, f"{weight:.12g}"])
+
+
+def _split_edge_key(key: str) -> tuple[str, str, str]:
+    parts = key.split("|", 2)
+    if len(parts) != 3:
+        return key, "", ""
+    return parts[0], parts[1], parts[2]
 
 
 def _rank_positions(rows: list[tuple[str, float]]) -> dict[str, int]:

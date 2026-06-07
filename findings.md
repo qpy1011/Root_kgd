@@ -45,6 +45,12 @@ This file records paper and repository findings. Treat quoted or extracted paper
   - Learned weights: `State of=0.9331`, `Output=0.5449`, `State=0.4666`, `Contain=0.4541`, `Contained by=0.03125`, `Generate=0.03125`.
   - GNN top results: IDV(1) `x45`/Stream 4, IDV(4) `x51`/Stream 12, IDV(6) `x1`/Stream 1, IDV(12) `x11`/Stream 14.
   - PyTorch was not required for this first extension because the NumPy relation-weight learner already improved the labeled ranking objective and matched the paper-target top ranks.
+- The GNN was later upgraded from relation-only weights to edge-specific weights:
+  - The experiment now trains relation weights first as a stable prior, expands those weights to all graph edges, then fine-tunes a limited set of high-evidence edge weights.
+  - All 323 TEP PIKG edges receive an independent exported weight in `outputs_gnn_edge/edge_weights.csv`.
+  - With default current parameters (`r_pc=0.56`, `layers=6`, `epochs=20`, `edge_epochs=2`, `max_trainable_edges=80`), 13 edge weights changed from their relation priors.
+  - The edge-specific run produced top results: IDV(1) `x4`/Stream 4, IDV(4) `x51`/Stream 12, IDV(6) `x1`/Stream 1, IDV(12) `x11`/Stream 14.
+  - This two-stage strategy is preferred over freely training every edge because only four labeled TEP cases are available; unconstrained edge-wise coordinate search was too slow and more prone to overfitting.
 
 ## Elevator KG Findings
 

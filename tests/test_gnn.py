@@ -1,12 +1,18 @@
 import numpy as np
 
+import run_gnn_experiment
 from rootkgd.gnn import (
     GnnParameters,
     GnnTrainingCase,
+    edge_key,
     fit_gnn_parameters,
     gnn_propagate,
     gnn_ranking_loss,
     gnn_root_scores,
+    initial_gnn_parameters_from_rfpa,
+    trainable_edge_keys,
+    training_candidate_nodes,
+    with_edge_weights_from_graph,
 )
 from rootkgd.graph import KnowledgeGraph
 
@@ -30,6 +36,28 @@ def test_gnn_propagate_uses_relation_specific_weights() -> None:
     np.testing.assert_allclose(scores["c"], 0.2)
 
 
+def test_gnn_propagate_prefers_edge_specific_weights() -> None:
+    graph = KnowledgeGraph()
+    for node in ("a", "b", "c"):
+        graph.add_node(node, "variable")
+    graph.add_edge("a", "State", "b")
+    graph.add_edge("a", "State", "c")
+    params = GnnParameters(
+        relation_weights={"State": 0.5},
+        edge_weights={
+            edge_key("a", "State", "b"): 0.9,
+            edge_key("a", "State", "c"): 0.1,
+        },
+        self_weight=0.0,
+        layers=1,
+    )
+
+    scores = gnn_propagate(graph, "a", 1.0, params)
+
+    np.testing.assert_allclose(scores["b"], 0.9)
+    np.testing.assert_allclose(scores["c"], 0.1)
+
+
 def test_gnn_root_scores_rank_source_matching_contribution_pattern() -> None:
     graph = KnowledgeGraph()
     for node in ("x1", "x2", "x3"):
@@ -46,6 +74,48 @@ def test_gnn_root_scores_rank_source_matching_contribution_pattern() -> None:
     ranked = gnn_root_scores(graph, contributions, ["x1", "x2", "x3"], params)
 
     assert ranked[0][0] == "x1"
+
+
+def test_initial_gnn_parameters_can_assign_every_edge_weight() -> None:
+    graph = KnowledgeGraph()
+    for node in ("a", "b", "c"):
+        graph.add_node(node, "variable")
+    graph.add_edge("a", "State", "b")
+    graph.add_edge("a", "State", "c")
+
+    params = initial_gnn_parameters_from_rfpa(
+        {"State"},
+        {"State": 1.0},
+        sigma=0.1,
+        layers=1,
+        graph=graph,
+    )
+
+    assert set(params.edge_weights) == {
+        edge_key("a", "State", "b"),
+        edge_key("a", "State", "c"),
+    }
+    np.testing.assert_allclose(params.edge_weights[edge_key("a", "State", "b")], np.exp(-0.1))
+
+
+def test_with_edge_weights_from_graph_expands_relation_weights_to_each_edge() -> None:
+    graph = KnowledgeGraph()
+    for node in ("a", "b", "c"):
+        graph.add_node(node, "variable")
+    graph.add_edge("a", "State", "b")
+    graph.add_edge("a", "Output", "c")
+    relation_params = GnnParameters(
+        relation_weights={"State": 0.8, "Output": 0.2},
+        self_weight=0.0,
+        layers=1,
+    )
+
+    edge_params = with_edge_weights_from_graph(graph, relation_params)
+
+    assert edge_params.edge_weights == {
+        edge_key("a", "State", "b"): 0.8,
+        edge_key("a", "Output", "c"): 0.2,
+    }
 
 
 def test_fit_gnn_parameters_reduces_label_ranking_loss() -> None:
@@ -78,6 +148,102 @@ def test_fit_gnn_parameters_reduces_label_ranking_loss() -> None:
     assert gnn_ranking_loss(graph, [case], ["x1", "x2", "x3"], result.params) < gnn_ranking_loss(
         graph, [case], ["x1", "x2", "x3"], base
     )
+
+
+def test_fit_gnn_parameters_can_adjust_one_edge_without_changing_same_relation_edge() -> None:
+    graph = KnowledgeGraph()
+    for node in ("root", "useful", "noise"):
+        graph.add_node(node, "variable")
+    graph.add_edge("root", "State", "useful")
+    graph.add_edge("root", "State", "noise")
+    base = GnnParameters(
+        relation_weights={"State": 0.5},
+        edge_weights={
+            edge_key("root", "State", "useful"): 0.05,
+            edge_key("root", "State", "noise"): 0.8,
+        },
+        self_weight=0.0,
+        layers=1,
+    )
+    case = GnnTrainingCase(
+        name="edge-specific",
+        contributions={"root": 0.2, "useful": 1.0, "noise": 0.0},
+        positive_nodes=("root",),
+    )
+
+    result = fit_gnn_parameters(
+        graph,
+        [case],
+        ["root", "useful", "noise"],
+        base,
+        epochs=2,
+        regularization=0.0,
+    )
+
+    useful_key = edge_key("root", "State", "useful")
+    noise_key = edge_key("root", "State", "noise")
+    assert result.final_loss < result.base_loss
+    assert result.params.edge_weights[useful_key] > base.edge_weights[useful_key]
+    assert result.params.edge_weights[noise_key] <= base.edge_weights[noise_key]
+
+
+def test_trainable_edge_keys_focus_on_positive_and_high_contribution_neighborhoods() -> None:
+    graph = KnowledgeGraph()
+    for node in ("root", "useful", "noise", "far"):
+        graph.add_node(node, "variable")
+    graph.add_edge("root", "State", "useful")
+    graph.add_edge("noise", "State", "far")
+    case = GnnTrainingCase(
+        name="focused",
+        contributions={"root": 0.2, "useful": 1.0, "noise": 0.0, "far": 0.0},
+        positive_nodes=("root",),
+    )
+
+    keys = trainable_edge_keys(graph, [case], ["root", "useful", "noise", "far"], hops=1, top_contribution_nodes=1)
+
+    assert edge_key("root", "State", "useful") in keys
+    assert edge_key("noise", "State", "far") not in keys
+
+
+def test_training_candidate_nodes_keep_positives_and_hard_negatives() -> None:
+    graph = KnowledgeGraph()
+    for node in ("root", "useful", "hard_negative", "low"):
+        graph.add_node(node, "variable")
+    graph.add_edge("hard_negative", "State", "useful")
+    params = GnnParameters(relation_weights={"State": 1.0}, self_weight=0.0, layers=1)
+    case = GnnTrainingCase(
+        name="candidates",
+        contributions={"root": 0.2, "useful": 1.0, "hard_negative": 0.1, "low": 0.0},
+        positive_nodes=("root",),
+    )
+
+    candidates = training_candidate_nodes(
+        graph,
+        [case],
+        ["root", "useful", "hard_negative", "low"],
+        params,
+        top_contribution_nodes=1,
+        hard_negatives_per_case=2,
+    )
+
+    assert "root" in candidates
+    assert "useful" in candidates
+    assert "hard_negative" in candidates
+
+
+def test_run_gnn_experiment_exports_edge_weights(tmp_path) -> None:
+    weights = {
+        edge_key("a", "State", "b"): 0.9,
+        edge_key("a", "State", "c"): 0.1,
+    }
+
+    output = tmp_path / "edge_weights.csv"
+    run_gnn_experiment._write_edge_weights(output, weights)
+
+    content = output.read_text(encoding="utf-8")
+    assert "head,relation,tail,edge_key,weight" in content
+    assert "a,State,b,a|State|b,0.9" in content
+    assert "a,State,c,a|State|c,0.1" in content
 
 
 def test_gnn_ranking_loss_penalizes_each_positive_node() -> None:

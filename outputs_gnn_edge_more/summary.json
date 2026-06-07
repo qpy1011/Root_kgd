@@ -1,0 +1,126 @@
+{
+  "base_loss": 0.008905439332585927,
+  "final_loss": 0.0,
+  "relation_base_loss": 0.034590818373491386,
+  "relation_final_loss": 0.003345088333412507,
+  "check_loss": 0.0,
+  "layers": 4,
+  "history": [
+    0.008905439332585927,
+    0.006978010460314385,
+    0.0040806493366425944,
+    0.0019516366274697208,
+    0.0017010263157433813,
+    0.0014582502486133752,
+    0.0013166305931244604,
+    0.0012662855706470195,
+    0.0012527754732584468,
+    0.0012458150950280828,
+    0.0012412033567179555,
+    0.0012386825848381175,
+    0.001237291323836304,
+    0.0012363099585849693,
+    0.0012361582956493212,
+    0.0012360869412236571,
+    0.0012360490901320307,
+    0.0012360242232876035,
+    0.0012360129325414818,
+    0.0012360082037945251,
+    0.0012360052320484595
+  ],
+  "relation_weights": {
+    "Contain": 0.40269372623874383,
+    "Contained by": 0.03191877063224792,
+    "Generate": 0.2818574459546054,
+    "Output": 0.615234375,
+    "State": 0.4060870274847879,
+    "State of": 0.8477417879964064
+  },
+  "edge_weight_count": 323,
+  "edge_weights_file": "edge_weights.csv",
+  "max_trainable_edges": 120,
+  "cases": [
+    {
+      "fault_id": 1,
+      "description": "A/C feed ratio step change in stream 4.",
+      "expected_variables": [
+        "x4",
+        "x45"
+      ],
+      "expected_physical": [
+        "Stream 4"
+      ],
+      "top_variable": "x4",
+      "top_physical": "Stream 4",
+      "expected_variable_ranks": {
+        "x4": 1,
+        "x45": 2
+      },
+      "expected_physical_ranks": {
+        "Stream 4": 1
+      }
+    },
+    {
+      "fault_id": 4,
+      "description": "Reactor cooling-water inlet temperature step change.",
+      "expected_variables": [
+        "x51"
+      ],
+      "expected_physical": [
+        "Stream 12",
+        "Reactor"
+      ],
+      "top_variable": "x51",
+      "top_physical": "Stream 12",
+      "expected_variable_ranks": {
+        "x51": 1
+      },
+      "expected_physical_ranks": {
+        "Stream 12": 1,
+        "Reactor": 2
+      }
+    },
+    {
+      "fault_id": 6,
+      "description": "A feed loss in stream 1.",
+      "expected_variables": [
+        "x1",
+        "x44"
+      ],
+      "expected_physical": [
+        "Stream 1"
+      ],
+      "top_variable": "x1",
+      "top_physical": "Stream 1",
+      "expected_variable_ranks": {
+        "x1": 1,
+        "x44": 2
+      },
+      "expected_physical_ranks": {
+        "Stream 1": 1
+      }
+    },
+    {
+      "fault_id": 12,
+      "description": "Condenser cooling-water inlet temperature random variation.",
+      "expected_variables": [
+        "x11"
+      ],
+      "expected_physical": [
+        "Stream 14",
+        "Condenser",
+        "Separator"
+      ],
+      "top_variable": "x11",
+      "top_physical": "Stream 14",
+      "expected_variable_ranks": {
+        "x11": 1
+      },
+      "expected_physical_ranks": {
+        "Stream 14": 1,
+        "Condenser": 2,
+        "Separator": 3
+      }
+    }
+  ]
+}
