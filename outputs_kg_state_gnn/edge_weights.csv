@@ -1,0 +1,740 @@
+head,relation,tail,edge_key,weight
+A,Contained by,Stream 1,A|Contained by|Stream 1,0.475107908249
+A,Contained by,Stream 14,A|Contained by|Stream 14,0.0804173275828
+A,Contained by,Stream 4,A|Contained by|Stream 4,0.102017149329
+A,Contained by,Stream 5,A|Contained by|Stream 5,0.0673332586884
+A,Contained by,Stream 6,A|Contained by|Stream 6,0.244190499187
+A,Contained by,Stream 7,A|Contained by|Stream 7,0.114543527365
+A,Contained by,Stream 8,A|Contained by|Stream 8,0.0539906024933
+A,Contained by,Stream 9,A|Contained by|Stream 9,0.577302575111
+A,Generate,F,A|Generate|F,0.341144472361
+A,Generate,G,A|Generate|G,0.00816849805415
+A,Generate,H,A|Generate|H,0.0141195319593
+A,State,x23,A|State|x23,1.30149185658
+A,State,x29,A|State|x29,1.31256389618
+B,Contained by,Stream 14,B|Contained by|Stream 14,0.127502515912
+B,Contained by,Stream 4,B|Contained by|Stream 4,0.0525425113738
+B,Contained by,Stream 5,B|Contained by|Stream 5,0.0953177064657
+B,Contained by,Stream 6,B|Contained by|Stream 6,0.0809962004423
+B,Contained by,Stream 7,B|Contained by|Stream 7,0.951259970665
+B,Contained by,Stream 8,B|Contained by|Stream 8,0.181892603636
+B,Contained by,Stream 9,B|Contained by|Stream 9,0.628918528557
+B,State,x24,B|State|x24,1.47287428379
+B,State,x30,B|State|x30,0.95614773035
+Compressor,Output,Stream 6,Compressor|Output|Stream 6,0.376807928085
+Compressor,State,x20,Compressor|State|x20,0.663882672787
+Compressor,State,x46,Compressor|State|x46,1.02996325493
+Condenser,Output,Stream 14,Condenser|Output|Stream 14,1.29549896717
+Condenser,State,x22,Condenser|State|x22,1.39260363579
+Condenser,State,x52,Condenser|State|x52,0.651441693306
+Cooling Water,Contained by,Stream 12,Cooling Water|Contained by|Stream 12,0.322055011988
+Cooling Water,Contained by,Stream 13,Cooling Water|Contained by|Stream 13,0.913501560688
+C,Contained by,Stream 14,C|Contained by|Stream 14,0.0508380271494
+C,Contained by,Stream 4,C|Contained by|Stream 4,0.0715394094586
+C,Contained by,Stream 5,C|Contained by|Stream 5,0.0501964092255
+C,Contained by,Stream 6,C|Contained by|Stream 6,0.453458279371
+C,Contained by,Stream 7,C|Contained by|Stream 7,0.0781780481339
+C,Contained by,Stream 8,C|Contained by|Stream 8,0.103412389755
+C,Contained by,Stream 9,C|Contained by|Stream 9,0.868647396564
+C,Generate,G,C|Generate|G,0.00830218754709
+C,Generate,H,C|Generate|H,0.0112165668979
+C,State,x25,C|State|x25,1.15559256077
+C,State,x31,C|State|x31,1.09523189068
+D,Contained by,Stream 10,D|Contained by|Stream 10,0.239267081022
+D,Contained by,Stream 11,D|Contained by|Stream 11,1.76289188862
+D,Contained by,Stream 14,D|Contained by|Stream 14,0.0781175866723
+D,Contained by,Stream 2,D|Contained by|Stream 2,0.109554074705
+D,Contained by,Stream 5,D|Contained by|Stream 5,0.0446323901415
+D,Contained by,Stream 6,D|Contained by|Stream 6,0.947041749954
+D,Contained by,Stream 7,D|Contained by|Stream 7,0.238292142749
+D,Contained by,Stream 8,D|Contained by|Stream 8,0.145441040397
+D,Contained by,Stream 9,D|Contained by|Stream 9,0.689728736877
+D,Generate,F,D|Generate|F,0.0999557971954
+D,Generate,G,D|Generate|G,0.128916606307
+D,State,x26,D|State|x26,0.106847710907
+D,State,x32,D|State|x32,0.128289744258
+D,State,x37,D|State|x37,0.132725641131
+E,Contained by,Stream 10,E|Contained by|Stream 10,0.0456287488341
+E,Contained by,Stream 11,E|Contained by|Stream 11,0.106049068272
+E,Contained by,Stream 14,E|Contained by|Stream 14,0.0464395098388
+E,Contained by,Stream 3,E|Contained by|Stream 3,0.105837509036
+E,Contained by,Stream 5,E|Contained by|Stream 5,0.0665645450354
+E,Contained by,Stream 6,E|Contained by|Stream 6,0.1274215132
+E,Contained by,Stream 7,E|Contained by|Stream 7,0.0921626612544
+E,Contained by,Stream 8,E|Contained by|Stream 8,0.0431265495718
+E,Contained by,Stream 9,E|Contained by|Stream 9,1.26376783848
+E,Generate,F,E|Generate|F,0.0136103499681
+E,Generate,H,E|Generate|H,0.0237393956631
+E,State,x27,E|State|x27,0.295648187399
+E,State,x33,E|State|x33,1.30337381363
+E,State,x38,E|State|x38,1.78123486042
+F,Contained by,Stream 10,F|Contained by|Stream 10,0.0289007443935
+F,Contained by,Stream 11,F|Contained by|Stream 11,0.258546769619
+F,Contained by,Stream 14,F|Contained by|Stream 14,0.03951581195
+F,Contained by,Stream 5,F|Contained by|Stream 5,0.0384523831308
+F,Contained by,Stream 6,F|Contained by|Stream 6,0.420392334461
+F,Contained by,Stream 7,F|Contained by|Stream 7,0.14386728406
+F,Contained by,Stream 8,F|Contained by|Stream 8,0.0290057957172
+F,Contained by,Stream 9,F|Contained by|Stream 9,1.37066531181
+F,State,x28,F|State|x28,0.18734523654
+F,State,x34,F|State|x34,0.767598092556
+F,State,x39,F|State|x39,1.85458254814
+G,Contained by,Stream 10,G|Contained by|Stream 10,0.619543492794
+G,Contained by,Stream 11,G|Contained by|Stream 11,0.0579783171415
+G,Contained by,Stream 14,G|Contained by|Stream 14,0.0296751018614
+G,Contained by,Stream 5,G|Contained by|Stream 5,0.0388038158417
+G,Contained by,Stream 7,G|Contained by|Stream 7,0.0618465729058
+G,Contained by,Stream 8,G|Contained by|Stream 8,1.37545692921
+G,Contained by,Stream 9,G|Contained by|Stream 9,0.995414018631
+G,State,x35,G|State|x35,1.87296807766
+G,State,x40,G|State|x40,0.42337012291
+H,Contained by,Stream 10,H|Contained by|Stream 10,0.13162919879
+H,Contained by,Stream 11,H|Contained by|Stream 11,0.154876276851
+H,Contained by,Stream 14,H|Contained by|Stream 14,0.039158180356
+H,Contained by,Stream 5,H|Contained by|Stream 5,0.0592206455767
+H,Contained by,Stream 7,H|Contained by|Stream 7,0.063407920301
+H,Contained by,Stream 8,H|Contained by|Stream 8,0.234935969114
+H,Contained by,Stream 9,H|Contained by|Stream 9,1.11181414127
+H,State,x36,H|State|x36,0.526431560516
+H,State,x41,H|State|x41,0.109425321221
+Reactor,Output,Stream 7,Reactor|Output|Stream 7,0.958337068558
+Reactor,State,x21,Reactor|State|x21,0.84888702631
+Reactor,State,x51,Reactor|State|x51,0.309543818235
+Reactor,State,x7,Reactor|State|x7,1.73247206211
+Reactor,State,x8,Reactor|State|x8,0.101578995585
+Reactor,State,x9,Reactor|State|x9,0.519811987877
+Separator,Output,Stream 10,Separator|Output|Stream 10,1.19804346561
+Separator,Output,Stream 8,Separator|Output|Stream 8,0.294570147991
+Separator,Output,Stream 9,Separator|Output|Stream 9,0.453683495522
+Separator,State,x11,Separator|State|x11,1.68581330776
+Separator,State,x12,Separator|State|x12,0.179614335299
+Separator,State,x13,Separator|State|x13,1.29592561722
+Separator,State,x48,Separator|State|x48,1.0265237093
+Steam,Contained by,Stripper Steam,Steam|Contained by|Stripper Steam,0.365283101797
+Stream 10,Contain,D,Stream 10|Contain|D,0.576575875282
+Stream 10,Contain,E,Stream 10|Contain|E,0.111533589661
+Stream 10,Contain,F,Stream 10|Contain|F,0.0231354068965
+Stream 10,Contain,G,Stream 10|Contain|G,1.84513497353
+Stream 10,Contain,H,Stream 10|Contain|H,0.836893200874
+Stream 10,Output,Stripper,Stream 10|Output|Stripper,0.102458283305
+Stream 10,State,x14,Stream 10|State|x14,1.41145122051
+Stream 10,State,x48,Stream 10|State|x48,0.451519727707
+Stream 11,Contain,D,Stream 11|Contain|D,0.341750949621
+Stream 11,Contain,E,Stream 11|Contain|E,0.963907122612
+Stream 11,Contain,F,Stream 11|Contain|F,0.0566339455545
+Stream 11,Contain,G,Stream 11|Contain|G,1.43542075157
+Stream 11,Contain,H,Stream 11|Contain|H,0.207282304764
+Stream 11,State,x17,Stream 11|State|x17,0.588001191616
+Stream 11,State,x37,Stream 11|State|x37,0.617950499058
+Stream 11,State,x38,Stream 11|State|x38,0.160701900721
+Stream 11,State,x39,Stream 11|State|x39,0.227534428239
+Stream 11,State,x40,Stream 11|State|x40,1.60915994644
+Stream 11,State,x41,Stream 11|State|x41,1.47456789017
+Stream 11,State,x49,Stream 11|State|x49,0.320248007774
+Stream 12,Contain,Cooling Water,Stream 12|Contain|Cooling Water,0.728356301785
+Stream 12,Output,Reactor,Stream 12|Output|Reactor,0.703022420406
+Stream 12,State,x21,Stream 12|State|x21,0.841898858547
+Stream 12,State,x51,Stream 12|State|x51,1.14758384228
+Stream 13,Contain,Cooling Water,Stream 13|Contain|Cooling Water,0.106600560248
+Stream 13,Output,Condenser,Stream 13|Output|Condenser,1.52676844597
+Stream 13,State,x22,Stream 13|State|x22,0.2201923877
+Stream 13,State,x52,Stream 13|State|x52,0.227765351534
+Stream 14,Contain,A,Stream 14|Contain|A,0.265822678804
+Stream 14,Contain,B,Stream 14|Contain|B,0.106576673687
+Stream 14,Contain,C,Stream 14|Contain|C,0.202610760927
+Stream 14,Contain,D,Stream 14|Contain|D,0.200954571366
+Stream 14,Contain,E,Stream 14|Contain|E,0.510297834873
+Stream 14,Contain,F,Stream 14|Contain|F,1.88334143162
+Stream 14,Contain,G,Stream 14|Contain|G,0.106651745737
+Stream 14,Contain,H,Stream 14|Contain|H,0.398998647928
+Stream 14,Output,Separator,Stream 14|Output|Separator,1.76129686832
+Stream 14,State,x11,Stream 14|State|x11,0.239756628871
+Stream 1,Contain,A,Stream 1|Contain|A,0.491168379784
+Stream 1,Output,Stream 6,Stream 1|Output|Stream 6,0.443415552378
+Stream 1,State,x1,Stream 1|State|x1,1.42350757122
+Stream 1,State,x44,Stream 1|State|x44,1.26350188255
+Stream 2,Contain,D,Stream 2|Contain|D,1.06391119957
+Stream 2,Output,Stream 6,Stream 2|Output|Stream 6,0.69979929924
+Stream 2,State,x2,Stream 2|State|x2,0.675854444504
+Stream 2,State,x42,Stream 2|State|x42,0.901283800602
+Stream 3,Contain,E,Stream 3|Contain|E,0.661903560162
+Stream 3,Output,Stream 6,Stream 3|Output|Stream 6,0.694913029671
+Stream 3,State,x3,Stream 3|State|x3,0.651706159115
+Stream 3,State,x43,Stream 3|State|x43,0.655334532261
+Stream 4,Contain,A,Stream 4|Contain|A,0.819602131844
+Stream 4,Contain,B,Stream 4|Contain|B,1.22730851173
+Stream 4,Contain,C,Stream 4|Contain|C,0.849723339081
+Stream 4,Output,Stripper,Stream 4|Output|Stripper,0.404618173838
+Stream 4,State,x4,Stream 4|State|x4,0.893740594387
+Stream 4,State,x45,Stream 4|State|x45,1.1324300766
+Stream 5,Contain,A,Stream 5|Contain|A,0.0897261500359
+Stream 5,Contain,B,Stream 5|Contain|B,0.572501659393
+Stream 5,Contain,C,Stream 5|Contain|C,0.638345301151
+Stream 5,Contain,D,Stream 5|Contain|D,0.200607419014
+Stream 5,Contain,E,Stream 5|Contain|E,0.189264982939
+Stream 5,Contain,F,Stream 5|Contain|F,0.12143804878
+Stream 5,Contain,G,Stream 5|Contain|G,1.93825411797
+Stream 5,Contain,H,Stream 5|Contain|H,0.262863278389
+Stream 5,Output,Stream 6,Stream 5|Output|Stream 6,0.109438486397
+Stream 6,Contain,A,Stream 6|Contain|A,1.18318963051
+Stream 6,Contain,B,Stream 6|Contain|B,0.052737865597
+Stream 6,Contain,C,Stream 6|Contain|C,0.0843886062503
+Stream 6,Contain,D,Stream 6|Contain|D,0.0663071870804
+Stream 6,Contain,E,Stream 6|Contain|E,0.67802798748
+Stream 6,Contain,F,Stream 6|Contain|F,0.191033005714
+Stream 6,Output,Reactor,Stream 6|Output|Reactor,0.14315289259
+Stream 6,State,x23,Stream 6|State|x23,0.640939593315
+Stream 6,State,x24,Stream 6|State|x24,0.200374305248
+Stream 6,State,x25,Stream 6|State|x25,0.273372381926
+Stream 6,State,x26,Stream 6|State|x26,0.421827048063
+Stream 6,State,x27,Stream 6|State|x27,1.50896000862
+Stream 6,State,x28,Stream 6|State|x28,0.634050488472
+Stream 6,State,x6,Stream 6|State|x6,0.780278742313
+Stream 7,Contain,A,Stream 7|Contain|A,0.129643261433
+Stream 7,Contain,B,Stream 7|Contain|B,0.0875524654984
+Stream 7,Contain,C,Stream 7|Contain|C,0.459883183241
+Stream 7,Contain,D,Stream 7|Contain|D,0.207944840193
+Stream 7,Contain,E,Stream 7|Contain|E,0.964417219162
+Stream 7,Contain,F,Stream 7|Contain|F,0.246022462845
+Stream 7,Contain,G,Stream 7|Contain|G,0.248544126749
+Stream 7,Contain,H,Stream 7|Contain|H,0.794846594334
+Stream 7,Output,Condenser,Stream 7|Output|Condenser,1.75556075573
+Stream 8,Contain,A,Stream 8|Contain|A,0.294730067253
+Stream 8,Contain,B,Stream 8|Contain|B,0.0985748618841
+Stream 8,Contain,C,Stream 8|Contain|C,0.142542496324
+Stream 8,Contain,D,Stream 8|Contain|D,0.0961296334863
+Stream 8,Contain,E,Stream 8|Contain|E,1.35318124294
+Stream 8,Contain,F,Stream 8|Contain|F,0.440820097923
+Stream 8,Contain,G,Stream 8|Contain|G,0.0681431293488
+Stream 8,Contain,H,Stream 8|Contain|H,0.147627040744
+Stream 8,Output,Compressor,Stream 8|Output|Compressor,1.13372814655
+Stream 8,Output,Stream 6,Stream 8|Output|Stream 6,0.30002656579
+Stream 8,State,x46,Stream 8|State|x46,0.495585530996
+Stream 8,State,x5,Stream 8|State|x5,1.22152614594
+Stream 9,Contain,A,Stream 9|Contain|A,0.0755436420441
+Stream 9,Contain,B,Stream 9|Contain|B,0.0487097129226
+Stream 9,Contain,C,Stream 9|Contain|C,0.03860289976
+Stream 9,Contain,D,Stream 9|Contain|D,0.0789054706693
+Stream 9,Contain,E,Stream 9|Contain|E,1.45962834358
+Stream 9,Contain,F,Stream 9|Contain|F,0.043594956398
+Stream 9,Contain,G,Stream 9|Contain|G,0.104506090283
+Stream 9,Contain,H,Stream 9|Contain|H,0.082495175302
+Stream 9,State,x10,Stream 9|State|x10,0.955010533333
+Stream 9,State,x29,Stream 9|State|x29,0.477864205837
+Stream 9,State,x30,Stream 9|State|x30,1.10328197479
+Stream 9,State,x31,Stream 9|State|x31,0.967420339584
+Stream 9,State,x32,Stream 9|State|x32,0.382265269756
+Stream 9,State,x33,Stream 9|State|x33,1.69757199287
+Stream 9,State,x34,Stream 9|State|x34,0.881743431091
+Stream 9,State,x35,Stream 9|State|x35,0.139170736074
+Stream 9,State,x36,Stream 9|State|x36,1.15217959881
+Stream 9,State,x47,Stream 9|State|x47,0.684810936451
+Stripper Steam,Contain,Steam,Stripper Steam|Contain|Steam,0.365285515785
+Stripper Steam,Output,Stripper,Stripper Steam|Output|Stripper,0.975493609905
+Stripper Steam,State,x19,Stripper Steam|State|x19,0.197920799255
+Stripper Steam,State,x50,Stripper Steam|State|x50,0.808619260788
+Stripper,Output,Stream 11,Stripper|Output|Stream 11,0.45292326808
+Stripper,Output,Stream 5,Stripper|Output|Stream 5,1.59529542923
+Stripper,State,x15,Stripper|State|x15,0.416726261377
+Stripper,State,x16,Stripper|State|x16,1.09274172783
+Stripper,State,x18,Stripper|State|x18,0.172971978784
+Stripper,State,x19,Stripper|State|x19,0.113769754767
+Stripper,State,x49,Stripper|State|x49,0.253984361887
+Stripper,State,x50,Stripper|State|x50,0.774661660194
+x10::fall,State evidence of,x10,x10::fall|State evidence of|x10,1.13466322422
+x10::high,State evidence of,x10,x10::high|State evidence of|x10,1.1252553463
+x10::low,State evidence of,x10,x10::low|State evidence of|x10,0.929962515831
+x10::rise,State evidence of,x10,x10::rise|State evidence of|x10,1.09694886208
+x10,Has abnormal state,x10::fall,x10|Has abnormal state|x10::fall,1.16065084934
+x10,Has abnormal state,x10::high,x10|Has abnormal state|x10::high,0.311829298735
+x10,Has abnormal state,x10::low,x10|Has abnormal state|x10::low,1.36658120155
+x10,Has abnormal state,x10::rise,x10|Has abnormal state|x10::rise,1.10400128365
+x10,State of,Stream 9,x10|State of|Stream 9,0.708698749542
+x11::fall,State evidence of,x11,x11::fall|State evidence of|x11,0.570895850658
+x11::high,State evidence of,x11,x11::high|State evidence of|x11,1.55303347111
+x11::low,State evidence of,x11,x11::low|State evidence of|x11,0.575532376766
+x11::rise,State evidence of,x11,x11::rise|State evidence of|x11,1.0794672966
+x11,Has abnormal state,x11::fall,x11|Has abnormal state|x11::fall,0.981032192707
+x11,Has abnormal state,x11::high,x11|Has abnormal state|x11::high,1.36600005627
+x11,Has abnormal state,x11::low,x11|Has abnormal state|x11::low,1.21910572052
+x11,Has abnormal state,x11::rise,x11|Has abnormal state|x11::rise,0.624189376831
+x11,State of,Separator,x11|State of|Separator,0.0381513386965
+x11,State of,Stream 14,x11|State of|Stream 14,1.03248941898
+x12::fall,State evidence of,x12,x12::fall|State evidence of|x12,1.01381707191
+x12::high,State evidence of,x12,x12::high|State evidence of|x12,1.00822424889
+x12::low,State evidence of,x12,x12::low|State evidence of|x12,0.999359548092
+x12::rise,State evidence of,x12,x12::rise|State evidence of|x12,1.01100432873
+x12,Has abnormal state,x12::fall,x12|Has abnormal state|x12::fall,1.06169462204
+x12,Has abnormal state,x12::high,x12|Has abnormal state|x12::high,0.881669580936
+x12,Has abnormal state,x12::low,x12|Has abnormal state|x12::low,0.919713079929
+x12,Has abnormal state,x12::rise,x12|Has abnormal state|x12::rise,1.01449668407
+x12,State of,Separator,x12|State of|Separator,0.70031785965
+x13::fall,State evidence of,x13,x13::fall|State evidence of|x13,0.867858350277
+x13::high,State evidence of,x13,x13::high|State evidence of|x13,0.668904900551
+x13::low,State evidence of,x13,x13::low|State evidence of|x13,0.406103461981
+x13::rise,State evidence of,x13,x13::rise|State evidence of|x13,0.521030366421
+x13,Has abnormal state,x13::fall,x13|Has abnormal state|x13::fall,0.154283255339
+x13,Has abnormal state,x13::high,x13|Has abnormal state|x13::high,0.597448170185
+x13,Has abnormal state,x13::low,x13|Has abnormal state|x13::low,1.55763947964
+x13,Has abnormal state,x13::rise,x13|Has abnormal state|x13::rise,1.60729920864
+x13,State of,Separator,x13|State of|Separator,0.142590194941
+x14::fall,State evidence of,x14,x14::fall|State evidence of|x14,1.37055873871
+x14::high,State evidence of,x14,x14::high|State evidence of|x14,1.36729323864
+x14::low,State evidence of,x14,x14::low|State evidence of|x14,1.31909620762
+x14::rise,State evidence of,x14,x14::rise|State evidence of|x14,1.36367285252
+x14,Has abnormal state,x14::fall,x14|Has abnormal state|x14::fall,1.60887777805
+x14,Has abnormal state,x14::high,x14|Has abnormal state|x14::high,1.35579240322
+x14,Has abnormal state,x14::low,x14|Has abnormal state|x14::low,1.13989138603
+x14,Has abnormal state,x14::rise,x14|Has abnormal state|x14::rise,1.32508969307
+x14,State of,Stream 10,x14|State of|Stream 10,0.927885890007
+x15::fall,State evidence of,x15,x15::fall|State evidence of|x15,0.989429414272
+x15::high,State evidence of,x15,x15::high|State evidence of|x15,1.03460657597
+x15::low,State evidence of,x15,x15::low|State evidence of|x15,0.994110167027
+x15::rise,State evidence of,x15,x15::rise|State evidence of|x15,0.99160951376
+x15,Has abnormal state,x15::fall,x15|Has abnormal state|x15::fall,0.771117210388
+x15,Has abnormal state,x15::high,x15|Has abnormal state|x15::high,1.2854309082
+x15,Has abnormal state,x15::low,x15|Has abnormal state|x15::low,0.58124423027
+x15,Has abnormal state,x15::rise,x15|Has abnormal state|x15::rise,0.809477388859
+x15,State of,Stripper,x15|State of|Stripper,0.629533290863
+x16::fall,State evidence of,x16,x16::fall|State evidence of|x16,1.05668056011
+x16::high,State evidence of,x16,x16::high|State evidence of|x16,1.69087982178
+x16::low,State evidence of,x16,x16::low|State evidence of|x16,0.0967184379697
+x16::rise,State evidence of,x16,x16::rise|State evidence of|x16,1.6941896677
+x16,Has abnormal state,x16::fall,x16|Has abnormal state|x16::fall,0.215464398265
+x16,Has abnormal state,x16::high,x16|Has abnormal state|x16::high,0.292246222496
+x16,Has abnormal state,x16::low,x16|Has abnormal state|x16::low,1.89331400394
+x16,Has abnormal state,x16::rise,x16|Has abnormal state|x16::rise,1.21382343769
+x16,State of,Stripper,x16|State of|Stripper,0.371257424355
+x17::fall,State evidence of,x17,x17::fall|State evidence of|x17,0.992968261242
+x17::high,State evidence of,x17,x17::high|State evidence of|x17,0.999831080437
+x17::low,State evidence of,x17,x17::low|State evidence of|x17,0.9873457551
+x17::rise,State evidence of,x17,x17::rise|State evidence of|x17,0.991047084332
+x17,Has abnormal state,x17::fall,x17|Has abnormal state|x17::fall,0.844105482101
+x17,Has abnormal state,x17::high,x17|Has abnormal state|x17::high,0.068179294467
+x17,Has abnormal state,x17::low,x17|Has abnormal state|x17::low,1.361774683
+x17,Has abnormal state,x17::rise,x17|Has abnormal state|x17::rise,0.993858158588
+x17,State of,Stream 11,x17|State of|Stream 11,0.707059264183
+x18::fall,State evidence of,x18,x18::fall|State evidence of|x18,1.0506465435
+x18::high,State evidence of,x18,x18::high|State evidence of|x18,1.4165443182
+x18::low,State evidence of,x18,x18::low|State evidence of|x18,1.04788649082
+x18::rise,State evidence of,x18,x18::rise|State evidence of|x18,1.27916824818
+x18,Has abnormal state,x18::fall,x18|Has abnormal state|x18::fall,1.10679852962
+x18,Has abnormal state,x18::high,x18|Has abnormal state|x18::high,1.01569736004
+x18,Has abnormal state,x18::low,x18|Has abnormal state|x18::low,0.324015110731
+x18,Has abnormal state,x18::rise,x18|Has abnormal state|x18::rise,1.38184463978
+x18,State of,Stripper,x18|State of|Stripper,0.329224467278
+x19::fall,State evidence of,x19,x19::fall|State evidence of|x19,1.44985044003
+x19::high,State evidence of,x19,x19::high|State evidence of|x19,0.788968503475
+x19::low,State evidence of,x19,x19::low|State evidence of|x19,1.41639280319
+x19::rise,State evidence of,x19,x19::rise|State evidence of|x19,0.525411188602
+x19,Has abnormal state,x19::fall,x19|Has abnormal state|x19::fall,1.23087954521
+x19,Has abnormal state,x19::high,x19|Has abnormal state|x19::high,0.21021951735
+x19,Has abnormal state,x19::low,x19|Has abnormal state|x19::low,0.131750330329
+x19,Has abnormal state,x19::rise,x19|Has abnormal state|x19::rise,1.09090483189
+x19,State of,Stripper,x19|State of|Stripper,0.473044931889
+x19,State of,Stripper Steam,x19|State of|Stripper Steam,0.440760463476
+x1::fall,State evidence of,x1,x1::fall|State evidence of|x1,1.00217032433
+x1::high,State evidence of,x1,x1::high|State evidence of|x1,1.02596008778
+x1::low,State evidence of,x1,x1::low|State evidence of|x1,0.790604650974
+x1::rise,State evidence of,x1,x1::rise|State evidence of|x1,1.00447452068
+x1,Has abnormal state,x1::fall,x1|Has abnormal state|x1::fall,0.574452877045
+x1,Has abnormal state,x1::high,x1|Has abnormal state|x1::high,0.608007609844
+x1,Has abnormal state,x1::low,x1|Has abnormal state|x1::low,0.706125438213
+x1,Has abnormal state,x1::rise,x1|Has abnormal state|x1::rise,0.566664338112
+x1,State of,Stream 1,x1|State of|Stream 1,1.19731831551
+x20::fall,State evidence of,x20,x20::fall|State evidence of|x20,1.15087389946
+x20::high,State evidence of,x20,x20::high|State evidence of|x20,0.96570456028
+x20::low,State evidence of,x20,x20::low|State evidence of|x20,1.14583981037
+x20::rise,State evidence of,x20,x20::rise|State evidence of|x20,0.910730183125
+x20,Has abnormal state,x20::fall,x20|Has abnormal state|x20::fall,1.47307622433
+x20,Has abnormal state,x20::high,x20|Has abnormal state|x20::high,1.31279873848
+x20,Has abnormal state,x20::low,x20|Has abnormal state|x20::low,0.788920402527
+x20,Has abnormal state,x20::rise,x20|Has abnormal state|x20::rise,1.18111884594
+x20,State of,Compressor,x20|State of|Compressor,0.418617099524
+x21::fall,State evidence of,x21,x21::fall|State evidence of|x21,0.374331355095
+x21::high,State evidence of,x21,x21::high|State evidence of|x21,0.719265222549
+x21::low,State evidence of,x21,x21::low|State evidence of|x21,0.361885219812
+x21::rise,State evidence of,x21,x21::rise|State evidence of|x21,0.379672080278
+x21,Has abnormal state,x21::fall,x21|Has abnormal state|x21::fall,0.601556181908
+x21,Has abnormal state,x21::high,x21|Has abnormal state|x21::high,0.541059613228
+x21,Has abnormal state,x21::low,x21|Has abnormal state|x21::low,1.73888456821
+x21,Has abnormal state,x21::rise,x21|Has abnormal state|x21::rise,0.565893411636
+x21,State of,Reactor,x21|State of|Reactor,1.38112318516
+x21,State of,Stream 12,x21|State of|Stream 12,0.954500973225
+x22::fall,State evidence of,x22,x22::fall|State evidence of|x22,0.443367451429
+x22::high,State evidence of,x22,x22::high|State evidence of|x22,0.107783824205
+x22::low,State evidence of,x22,x22::low|State evidence of|x22,1.11174798012
+x22::rise,State evidence of,x22,x22::rise|State evidence of|x22,0.389878571033
+x22,Has abnormal state,x22::fall,x22|Has abnormal state|x22::fall,0.379800081253
+x22,Has abnormal state,x22::high,x22|Has abnormal state|x22::high,1.79287600517
+x22,Has abnormal state,x22::low,x22|Has abnormal state|x22::low,0.409564256668
+x22,Has abnormal state,x22::rise,x22|Has abnormal state|x22::rise,0.412746548653
+x22,State of,Condenser,x22|State of|Condenser,1.21568059921
+x22,State of,Stream 13,x22|State of|Stream 13,0.678826272488
+x23::fall,State evidence of,x23,x23::fall|State evidence of|x23,0.773578643799
+x23::high,State evidence of,x23,x23::high|State evidence of|x23,0.803933560848
+x23::low,State evidence of,x23,x23::low|State evidence of|x23,0.535564124584
+x23::rise,State evidence of,x23,x23::rise|State evidence of|x23,0.897619485855
+x23,Has abnormal state,x23::fall,x23|Has abnormal state|x23::fall,0.65264236927
+x23,Has abnormal state,x23::high,x23|Has abnormal state|x23::high,0.703993856907
+x23,Has abnormal state,x23::low,x23|Has abnormal state|x23::low,1.87225091457
+x23,Has abnormal state,x23::rise,x23|Has abnormal state|x23::rise,0.536281943321
+x23,State of,A,x23|State of|A,0.46677133441
+x23,State of,Stream 6,x23|State of|Stream 6,1.54642057419
+x24::fall,State evidence of,x24,x24::fall|State evidence of|x24,0.599690437317
+x24::high,State evidence of,x24,x24::high|State evidence of|x24,0.620260357857
+x24::low,State evidence of,x24,x24::low|State evidence of|x24,0.831792891026
+x24::rise,State evidence of,x24,x24::rise|State evidence of|x24,0.529243409634
+x24,Has abnormal state,x24::fall,x24|Has abnormal state|x24::fall,0.831841528416
+x24,Has abnormal state,x24::high,x24|Has abnormal state|x24::high,1.84398424625
+x24,Has abnormal state,x24::low,x24|Has abnormal state|x24::low,0.166753590107
+x24,Has abnormal state,x24::rise,x24|Has abnormal state|x24::rise,1.08652746677
+x24,State of,B,x24|State of|B,0.750191628933
+x24,State of,Stream 6,x24|State of|Stream 6,1.66437149048
+x25::fall,State evidence of,x25,x25::fall|State evidence of|x25,0.388931691647
+x25::high,State evidence of,x25,x25::high|State evidence of|x25,0.20581330359
+x25::low,State evidence of,x25,x25::low|State evidence of|x25,0.479786038399
+x25::rise,State evidence of,x25,x25::rise|State evidence of|x25,0.276833444834
+x25,Has abnormal state,x25::fall,x25|Has abnormal state|x25::fall,0.390910059214
+x25,Has abnormal state,x25::high,x25|Has abnormal state|x25::high,1.5013961792
+x25,Has abnormal state,x25::low,x25|Has abnormal state|x25::low,0.762767314911
+x25,Has abnormal state,x25::rise,x25|Has abnormal state|x25::rise,0.771433472633
+x25,State of,C,x25|State of|C,1.26939284801
+x25,State of,Stream 6,x25|State of|Stream 6,1.02400529385
+x26::fall,State evidence of,x26,x26::fall|State evidence of|x26,0.991159856319
+x26::high,State evidence of,x26,x26::high|State evidence of|x26,1.00731050968
+x26::low,State evidence of,x26,x26::low|State evidence of|x26,0.99480175972
+x26::rise,State evidence of,x26,x26::rise|State evidence of|x26,0.990981161594
+x26,Has abnormal state,x26::fall,x26|Has abnormal state|x26::fall,1.03435385227
+x26,Has abnormal state,x26::high,x26|Has abnormal state|x26::high,1.66194832325
+x26,Has abnormal state,x26::low,x26|Has abnormal state|x26::low,0.543310284615
+x26,Has abnormal state,x26::rise,x26|Has abnormal state|x26::rise,0.996537089348
+x26,State of,D,x26|State of|D,0.551001608372
+x26,State of,Stream 6,x26|State of|Stream 6,0.180469855666
+x27::fall,State evidence of,x27,x27::fall|State evidence of|x27,0.996829092503
+x27::high,State evidence of,x27,x27::high|State evidence of|x27,1.05670213699
+x27::low,State evidence of,x27,x27::low|State evidence of|x27,0.458965092897
+x27::rise,State evidence of,x27,x27::rise|State evidence of|x27,0.979605615139
+x27,Has abnormal state,x27::fall,x27|Has abnormal state|x27::fall,0.744136035442
+x27,Has abnormal state,x27::high,x27|Has abnormal state|x27::high,0.0818366706371
+x27,Has abnormal state,x27::low,x27|Has abnormal state|x27::low,1.85380268097
+x27,Has abnormal state,x27::rise,x27|Has abnormal state|x27::rise,0.677876710892
+x27,State of,E,x27|State of|E,1.78437650204
+x27,State of,Stream 6,x27|State of|Stream 6,0.14525975287
+x28::fall,State evidence of,x28,x28::fall|State evidence of|x28,0.740063548088
+x28::high,State evidence of,x28,x28::high|State evidence of|x28,0.837370455265
+x28::low,State evidence of,x28,x28::low|State evidence of|x28,0.853219270706
+x28::rise,State evidence of,x28,x28::rise|State evidence of|x28,0.872904777527
+x28,Has abnormal state,x28::fall,x28|Has abnormal state|x28::fall,1.09132480621
+x28,Has abnormal state,x28::high,x28|Has abnormal state|x28::high,0.350119262934
+x28,Has abnormal state,x28::low,x28|Has abnormal state|x28::low,1.62032198906
+x28,Has abnormal state,x28::rise,x28|Has abnormal state|x28::rise,0.621001899242
+x28,State of,F,x28|State of|F,0.497493624687
+x28,State of,Stream 6,x28|State of|Stream 6,0.192725807428
+x29::fall,State evidence of,x29,x29::fall|State evidence of|x29,0.772695839405
+x29::high,State evidence of,x29,x29::high|State evidence of|x29,0.898974597454
+x29::low,State evidence of,x29,x29::low|State evidence of|x29,0.782880485058
+x29::rise,State evidence of,x29,x29::rise|State evidence of|x29,0.68417853117
+x29,Has abnormal state,x29::fall,x29|Has abnormal state|x29::fall,0.792110145092
+x29,Has abnormal state,x29::high,x29|Has abnormal state|x29::high,0.552797913551
+x29,Has abnormal state,x29::low,x29|Has abnormal state|x29::low,1.73655545712
+x29,Has abnormal state,x29::rise,x29|Has abnormal state|x29::rise,1.15438866615
+x29,State of,A,x29|State of|A,0.273613959551
+x29,State of,Stream 9,x29|State of|Stream 9,0.420219570398
+x2::fall,State evidence of,x2,x2::fall|State evidence of|x2,0.604392051697
+x2::high,State evidence of,x2,x2::high|State evidence of|x2,0.769877314568
+x2::low,State evidence of,x2,x2::low|State evidence of|x2,0.508965849876
+x2::rise,State evidence of,x2,x2::rise|State evidence of|x2,0.62702947855
+x2,Has abnormal state,x2::fall,x2|Has abnormal state|x2::fall,0.654135286808
+x2,Has abnormal state,x2::high,x2|Has abnormal state|x2::high,0.311643600464
+x2,Has abnormal state,x2::low,x2|Has abnormal state|x2::low,0.702659726143
+x2,Has abnormal state,x2::rise,x2|Has abnormal state|x2::rise,0.596830129623
+x2,State of,Stream 2,x2|State of|Stream 2,1.22706830502
+x30::fall,State evidence of,x30,x30::fall|State evidence of|x30,0.643456280231
+x30::high,State evidence of,x30,x30::high|State evidence of|x30,0.777543246746
+x30::low,State evidence of,x30,x30::low|State evidence of|x30,0.852313041687
+x30::rise,State evidence of,x30,x30::rise|State evidence of|x30,0.628893256187
+x30,Has abnormal state,x30::fall,x30|Has abnormal state|x30::fall,1.28619098663
+x30,Has abnormal state,x30::high,x30|Has abnormal state|x30::high,0.984794557095
+x30,Has abnormal state,x30::low,x30|Has abnormal state|x30::low,0.404889911413
+x30,Has abnormal state,x30::rise,x30|Has abnormal state|x30::rise,1.31561207771
+x30,State of,B,x30|State of|B,0.135072767735
+x30,State of,Stream 9,x30|State of|Stream 9,0.6680149436
+x31::fall,State evidence of,x31,x31::fall|State evidence of|x31,1.2904791832
+x31::high,State evidence of,x31,x31::high|State evidence of|x31,1.34278273582
+x31::low,State evidence of,x31,x31::low|State evidence of|x31,1.34678471088
+x31::rise,State evidence of,x31,x31::rise|State evidence of|x31,1.3601218462
+x31,Has abnormal state,x31::fall,x31|Has abnormal state|x31::fall,1.03021538258
+x31,Has abnormal state,x31::high,x31|Has abnormal state|x31::high,0.452570408583
+x31,Has abnormal state,x31::low,x31|Has abnormal state|x31::low,1.446595788
+x31,Has abnormal state,x31::rise,x31|Has abnormal state|x31::rise,1.26794350147
+x31,State of,C,x31|State of|C,0.51096868515
+x31,State of,Stream 9,x31|State of|Stream 9,0.284887850285
+x32::fall,State evidence of,x32,x32::fall|State evidence of|x32,0.803825557232
+x32::high,State evidence of,x32,x32::high|State evidence of|x32,0.832122921944
+x32::low,State evidence of,x32,x32::low|State evidence of|x32,0.83504652977
+x32::rise,State evidence of,x32,x32::rise|State evidence of|x32,0.835386157036
+x32,Has abnormal state,x32::fall,x32|Has abnormal state|x32::fall,0.877037346363
+x32,Has abnormal state,x32::high,x32|Has abnormal state|x32::high,0.396040707827
+x32,Has abnormal state,x32::low,x32|Has abnormal state|x32::low,0.793949186802
+x32,Has abnormal state,x32::rise,x32|Has abnormal state|x32::rise,0.731190919876
+x32,State of,D,x32|State of|D,0.788780212402
+x32,State of,Stream 9,x32|State of|Stream 9,0.917522370815
+x33::fall,State evidence of,x33,x33::fall|State evidence of|x33,1.81668651104
+x33::high,State evidence of,x33,x33::high|State evidence of|x33,1.70719027519
+x33::low,State evidence of,x33,x33::low|State evidence of|x33,1.21622216702
+x33::rise,State evidence of,x33,x33::rise|State evidence of|x33,1.80957615376
+x33,Has abnormal state,x33::fall,x33|Has abnormal state|x33::fall,1.85666286945
+x33,Has abnormal state,x33::high,x33|Has abnormal state|x33::high,0.456188231707
+x33,Has abnormal state,x33::low,x33|Has abnormal state|x33::low,1.26490819454
+x33,Has abnormal state,x33::rise,x33|Has abnormal state|x33::rise,1.88881480694
+x33,State of,E,x33|State of|E,1.082441926
+x33,State of,Stream 9,x33|State of|Stream 9,0.164007693529
+x34::fall,State evidence of,x34,x34::fall|State evidence of|x34,0.738585233688
+x34::high,State evidence of,x34,x34::high|State evidence of|x34,0.328316479921
+x34::low,State evidence of,x34,x34::low|State evidence of|x34,0.852179348469
+x34::rise,State evidence of,x34,x34::rise|State evidence of|x34,0.643754541874
+x34,Has abnormal state,x34::fall,x34|Has abnormal state|x34::fall,0.702987849712
+x34,Has abnormal state,x34::high,x34|Has abnormal state|x34::high,1.37739360332
+x34,Has abnormal state,x34::low,x34|Has abnormal state|x34::low,0.25441595912
+x34,Has abnormal state,x34::rise,x34|Has abnormal state|x34::rise,0.931563556194
+x34,State of,F,x34|State of|F,0.172547340393
+x34,State of,Stream 9,x34|State of|Stream 9,0.296332061291
+x35::fall,State evidence of,x35,x35::fall|State evidence of|x35,0.786376297474
+x35::high,State evidence of,x35,x35::high|State evidence of|x35,0.0883565098047
+x35::low,State evidence of,x35,x35::low|State evidence of|x35,0.878360152245
+x35::rise,State evidence of,x35,x35::rise|State evidence of|x35,0.647739231586
+x35,Has abnormal state,x35::fall,x35|Has abnormal state|x35::fall,1.34211862087
+x35,Has abnormal state,x35::high,x35|Has abnormal state|x35::high,1.48143768311
+x35,Has abnormal state,x35::low,x35|Has abnormal state|x35::low,0.989859044552
+x35,Has abnormal state,x35::rise,x35|Has abnormal state|x35::rise,1.56408703327
+x35,State of,G,x35|State of|G,0.422313123941
+x35,State of,Stream 9,x35|State of|Stream 9,0.138476774096
+x36::fall,State evidence of,x36,x36::fall|State evidence of|x36,0.963413059711
+x36::high,State evidence of,x36,x36::high|State evidence of|x36,1.09130561352
+x36::low,State evidence of,x36,x36::low|State evidence of|x36,0.967052638531
+x36::rise,State evidence of,x36,x36::rise|State evidence of|x36,0.963535785675
+x36,Has abnormal state,x36::fall,x36|Has abnormal state|x36::fall,0.857692658901
+x36,Has abnormal state,x36::high,x36|Has abnormal state|x36::high,1.57223033905
+x36,Has abnormal state,x36::low,x36|Has abnormal state|x36::low,0.130671799183
+x36,Has abnormal state,x36::rise,x36|Has abnormal state|x36::rise,0.790359020233
+x36,State of,H,x36|State of|H,0.832807481289
+x36,State of,Stream 9,x36|State of|Stream 9,0.547857284546
+x37::fall,State evidence of,x37,x37::fall|State evidence of|x37,0.968669056892
+x37::high,State evidence of,x37,x37::high|State evidence of|x37,0.972567856312
+x37::low,State evidence of,x37,x37::low|State evidence of|x37,0.984875023365
+x37::rise,State evidence of,x37,x37::rise|State evidence of|x37,1.03658175468
+x37,Has abnormal state,x37::fall,x37|Has abnormal state|x37::fall,0.677998304367
+x37,Has abnormal state,x37::high,x37|Has abnormal state|x37::high,0.0966291800141
+x37,Has abnormal state,x37::low,x37|Has abnormal state|x37::low,0.918902754784
+x37,Has abnormal state,x37::rise,x37|Has abnormal state|x37::rise,1.44396686554
+x37,State of,D,x37|State of|D,0.343097627163
+x37,State of,Stream 11,x37|State of|Stream 11,1.14863491058
+x38::fall,State evidence of,x38,x38::fall|State evidence of|x38,0.501248657703
+x38::high,State evidence of,x38,x38::high|State evidence of|x38,0.594657719135
+x38::low,State evidence of,x38,x38::low|State evidence of|x38,0.302091121674
+x38::rise,State evidence of,x38,x38::rise|State evidence of|x38,0.608093798161
+x38,Has abnormal state,x38::fall,x38|Has abnormal state|x38::fall,1.03796732426
+x38,Has abnormal state,x38::high,x38|Has abnormal state|x38::high,1.4687898159
+x38,Has abnormal state,x38::low,x38|Has abnormal state|x38::low,1.18603312969
+x38,Has abnormal state,x38::rise,x38|Has abnormal state|x38::rise,0.570193707943
+x38,State of,E,x38|State of|E,1.09541809559
+x38,State of,Stream 11,x38|State of|Stream 11,0.0997444614768
+x39::fall,State evidence of,x39,x39::fall|State evidence of|x39,0.243801474571
+x39::high,State evidence of,x39,x39::high|State evidence of|x39,0.0819568186998
+x39::low,State evidence of,x39,x39::low|State evidence of|x39,0.145745530725
+x39::rise,State evidence of,x39,x39::rise|State evidence of|x39,0.374677598476
+x39,Has abnormal state,x39::fall,x39|Has abnormal state|x39::fall,0.79423481226
+x39,Has abnormal state,x39::high,x39|Has abnormal state|x39::high,1.9354583025
+x39,Has abnormal state,x39::low,x39|Has abnormal state|x39::low,0.432122081518
+x39,Has abnormal state,x39::rise,x39|Has abnormal state|x39::rise,0.494861543179
+x39,State of,F,x39|State of|F,0.0479270927608
+x39,State of,Stream 11,x39|State of|Stream 11,0.0524855069816
+x3::fall,State evidence of,x3,x3::fall|State evidence of|x3,0.995948374271
+x3::high,State evidence of,x3,x3::high|State evidence of|x3,0.995607674122
+x3::low,State evidence of,x3,x3::low|State evidence of|x3,0.993254899979
+x3::rise,State evidence of,x3,x3::rise|State evidence of|x3,0.995624244213
+x3,Has abnormal state,x3::fall,x3|Has abnormal state|x3::fall,0.993960499763
+x3,Has abnormal state,x3::high,x3|Has abnormal state|x3::high,0.985895335674
+x3,Has abnormal state,x3::low,x3|Has abnormal state|x3::low,0.957661569118
+x3,Has abnormal state,x3::rise,x3|Has abnormal state|x3::rise,0.999349296093
+x3,State of,Stream 3,x3|State of|Stream 3,0.900611996651
+x40::fall,State evidence of,x40,x40::fall|State evidence of|x40,1.403393507
+x40::high,State evidence of,x40,x40::high|State evidence of|x40,1.18554031849
+x40::low,State evidence of,x40,x40::low|State evidence of|x40,1.29464697838
+x40::rise,State evidence of,x40,x40::rise|State evidence of|x40,1.39674091339
+x40,Has abnormal state,x40::fall,x40|Has abnormal state|x40::fall,1.74051988125
+x40,Has abnormal state,x40::high,x40|Has abnormal state|x40::high,0.323748916388
+x40,Has abnormal state,x40::low,x40|Has abnormal state|x40::low,0.296611279249
+x40,Has abnormal state,x40::rise,x40|Has abnormal state|x40::rise,1.58509814739
+x40,State of,G,x40|State of|G,1.80416059494
+x40,State of,Stream 11,x40|State of|Stream 11,0.0972466915846
+x41::fall,State evidence of,x41,x41::fall|State evidence of|x41,0.635071277618
+x41::high,State evidence of,x41,x41::high|State evidence of|x41,0.865456342697
+x41::low,State evidence of,x41,x41::low|State evidence of|x41,0.459431350231
+x41::rise,State evidence of,x41,x41::rise|State evidence of|x41,0.711885273457
+x41,Has abnormal state,x41::fall,x41|Has abnormal state|x41::fall,1.06893956661
+x41,Has abnormal state,x41::high,x41|Has abnormal state|x41::high,0.194514870644
+x41,Has abnormal state,x41::low,x41|Has abnormal state|x41::low,0.920030295849
+x41,Has abnormal state,x41::rise,x41|Has abnormal state|x41::rise,0.586084604263
+x41,State of,H,x41|State of|H,1.05284190178
+x41,State of,Stream 11,x41|State of|Stream 11,0.47054579854
+x42::fall,State evidence of,x42,x42::fall|State evidence of|x42,0.550168633461
+x42::high,State evidence of,x42,x42::high|State evidence of|x42,0.772504389286
+x42::low,State evidence of,x42,x42::low|State evidence of|x42,0.549232542515
+x42::rise,State evidence of,x42,x42::rise|State evidence of|x42,0.602892935276
+x42,Has abnormal state,x42::fall,x42|Has abnormal state|x42::fall,0.636336505413
+x42,Has abnormal state,x42::high,x42|Has abnormal state|x42::high,0.170262426138
+x42,Has abnormal state,x42::low,x42|Has abnormal state|x42::low,0.866250455379
+x42,Has abnormal state,x42::rise,x42|Has abnormal state|x42::rise,0.478144168854
+x42,State of,Stream 2,x42|State of|Stream 2,1.31735408306
+x43::fall,State evidence of,x43,x43::fall|State evidence of|x43,0.997694551945
+x43::high,State evidence of,x43,x43::high|State evidence of|x43,0.997478663921
+x43::low,State evidence of,x43,x43::low|State evidence of|x43,0.995223581791
+x43::rise,State evidence of,x43,x43::rise|State evidence of|x43,0.99747723341
+x43,Has abnormal state,x43::fall,x43|Has abnormal state|x43::fall,0.996676087379
+x43,Has abnormal state,x43::high,x43|Has abnormal state|x43::high,1.01331722736
+x43,Has abnormal state,x43::low,x43|Has abnormal state|x43::low,0.939114749432
+x43,Has abnormal state,x43::rise,x43|Has abnormal state|x43::rise,0.999127924442
+x43,State of,Stream 3,x43|State of|Stream 3,0.900611758232
+x44::fall,State evidence of,x44,x44::fall|State evidence of|x44,0.971584916115
+x44::high,State evidence of,x44,x44::high|State evidence of|x44,0.557651281357
+x44::low,State evidence of,x44,x44::low|State evidence of|x44,0.978618919849
+x44::rise,State evidence of,x44,x44::rise|State evidence of|x44,0.929576575756
+x44,Has abnormal state,x44::fall,x44|Has abnormal state|x44::fall,0.542740702629
+x44,Has abnormal state,x44::high,x44|Has abnormal state|x44::high,0.826554059982
+x44,Has abnormal state,x44::low,x44|Has abnormal state|x44::low,0.336196154356
+x44,Has abnormal state,x44::rise,x44|Has abnormal state|x44::rise,0.576704859734
+x44,State of,Stream 1,x44|State of|Stream 1,1.22958898544
+x45::fall,State evidence of,x45,x45::fall|State evidence of|x45,0.331266522408
+x45::high,State evidence of,x45,x45::high|State evidence of|x45,0.925178587437
+x45::low,State evidence of,x45,x45::low|State evidence of|x45,0.331103861332
+x45::rise,State evidence of,x45,x45::rise|State evidence of|x45,0.314472854137
+x45,Has abnormal state,x45::fall,x45|Has abnormal state|x45::fall,0.249325960875
+x45,Has abnormal state,x45::high,x45|Has abnormal state|x45::high,0.862189948559
+x45,Has abnormal state,x45::low,x45|Has abnormal state|x45::low,1.01345348358
+x45,Has abnormal state,x45::rise,x45|Has abnormal state|x45::rise,0.304467886686
+x45,State of,Stream 4,x45|State of|Stream 4,1.3186224699
+x46::fall,State evidence of,x46,x46::fall|State evidence of|x46,1.06500601768
+x46::high,State evidence of,x46,x46::high|State evidence of|x46,1.18572580814
+x46::low,State evidence of,x46,x46::low|State evidence of|x46,1.27525281906
+x46::rise,State evidence of,x46,x46::rise|State evidence of|x46,0.928722321987
+x46,Has abnormal state,x46::fall,x46|Has abnormal state|x46::fall,0.399999082088
+x46,Has abnormal state,x46::high,x46|Has abnormal state|x46::high,0.291235178709
+x46,Has abnormal state,x46::low,x46|Has abnormal state|x46::low,1.56915676594
+x46,Has abnormal state,x46::rise,x46|Has abnormal state|x46::rise,0.266457587481
+x46,State of,Compressor,x46|State of|Compressor,0.753200232983
+x46,State of,Stream 8,x46|State of|Stream 8,1.42074000835
+x47::fall,State evidence of,x47,x47::fall|State evidence of|x47,1.06214535236
+x47::high,State evidence of,x47,x47::high|State evidence of|x47,1.12704861164
+x47::low,State evidence of,x47,x47::low|State evidence of|x47,0.952634096146
+x47::rise,State evidence of,x47,x47::rise|State evidence of|x47,1.04733181
+x47,Has abnormal state,x47::fall,x47|Has abnormal state|x47::fall,1.15702867508
+x47,Has abnormal state,x47::high,x47|Has abnormal state|x47::high,0.354153692722
+x47,Has abnormal state,x47::low,x47|Has abnormal state|x47::low,1.16460633278
+x47,Has abnormal state,x47::rise,x47|Has abnormal state|x47::rise,1.08138632774
+x47,State of,Stream 9,x47|State of|Stream 9,0.695324540138
+x48::fall,State evidence of,x48,x48::fall|State evidence of|x48,0.684093296528
+x48::high,State evidence of,x48,x48::high|State evidence of|x48,0.896503090858
+x48::low,State evidence of,x48,x48::low|State evidence of|x48,0.945879161358
+x48::rise,State evidence of,x48,x48::rise|State evidence of|x48,0.758625030518
+x48,Has abnormal state,x48::fall,x48|Has abnormal state|x48::fall,0.928427696228
+x48,Has abnormal state,x48::high,x48|Has abnormal state|x48::high,0.417591899633
+x48,Has abnormal state,x48::low,x48|Has abnormal state|x48::low,0.216306641698
+x48,Has abnormal state,x48::rise,x48|Has abnormal state|x48::rise,0.774456977844
+x48,State of,Separator,x48|State of|Separator,1.15648818016
+x48,State of,Stream 10,x48|State of|Stream 10,1.62278544903
+x49::fall,State evidence of,x49,x49::fall|State evidence of|x49,0.775794029236
+x49::high,State evidence of,x49,x49::high|State evidence of|x49,0.654863655567
+x49::low,State evidence of,x49,x49::low|State evidence of|x49,0.830134689808
+x49::rise,State evidence of,x49,x49::rise|State evidence of|x49,0.763415753841
+x49,Has abnormal state,x49::fall,x49|Has abnormal state|x49::fall,0.70718318224
+x49,Has abnormal state,x49::high,x49|Has abnormal state|x49::high,1.15401637554
+x49,Has abnormal state,x49::low,x49|Has abnormal state|x49::low,0.472292542458
+x49,Has abnormal state,x49::rise,x49|Has abnormal state|x49::rise,0.735809087753
+x49,State of,Stream 11,x49|State of|Stream 11,0.638784766197
+x49,State of,Stripper,x49|State of|Stripper,0.515674889088
+x4::fall,State evidence of,x4,x4::fall|State evidence of|x4,0.605875015259
+x4::high,State evidence of,x4,x4::high|State evidence of|x4,0.725536644459
+x4::low,State evidence of,x4,x4::low|State evidence of|x4,0.48345503211
+x4::rise,State evidence of,x4,x4::rise|State evidence of|x4,0.597578465939
+x4,Has abnormal state,x4::fall,x4|Has abnormal state|x4::fall,0.407894819975
+x4,Has abnormal state,x4::high,x4|Has abnormal state|x4::high,0.20821069181
+x4,Has abnormal state,x4::low,x4|Has abnormal state|x4::low,1.40145409107
+x4,Has abnormal state,x4::rise,x4|Has abnormal state|x4::rise,0.408635169268
+x4,State of,Stream 4,x4|State of|Stream 4,1.25685286522
+x50::fall,State evidence of,x50,x50::fall|State evidence of|x50,1.51555037498
+x50::high,State evidence of,x50,x50::high|State evidence of|x50,1.45529723167
+x50::low,State evidence of,x50,x50::low|State evidence of|x50,1.55721020699
+x50::rise,State evidence of,x50,x50::rise|State evidence of|x50,1.44733381271
+x50,Has abnormal state,x50::fall,x50|Has abnormal state|x50::fall,1.35880684853
+x50,Has abnormal state,x50::high,x50|Has abnormal state|x50::high,0.203885793686
+x50,Has abnormal state,x50::low,x50|Has abnormal state|x50::low,0.0615721382201
+x50,Has abnormal state,x50::rise,x50|Has abnormal state|x50::rise,0.470592617989
+x50,State of,Stripper,x50|State of|Stripper,1.13654005527
+x50,State of,Stripper Steam,x50|State of|Stripper Steam,0.0622563883662
+x51::fall,State evidence of,x51,x51::fall|State evidence of|x51,0.98592621088
+x51::high,State evidence of,x51,x51::high|State evidence of|x51,0.679076254368
+x51::low,State evidence of,x51,x51::low|State evidence of|x51,0.908063530922
+x51::rise,State evidence of,x51,x51::rise|State evidence of|x51,0.945022344589
+x51,Has abnormal state,x51::fall,x51|Has abnormal state|x51::fall,0.475929260254
+x51,Has abnormal state,x51::high,x51|Has abnormal state|x51::high,1.03738355637
+x51,Has abnormal state,x51::low,x51|Has abnormal state|x51::low,0.549474060535
+x51,Has abnormal state,x51::rise,x51|Has abnormal state|x51::rise,0.646340727806
+x51,State of,Reactor,x51|State of|Reactor,0.336632996798
+x51,State of,Stream 12,x51|State of|Stream 12,1.58739066124
+x52::fall,State evidence of,x52,x52::fall|State evidence of|x52,0.365712404251
+x52::high,State evidence of,x52,x52::high|State evidence of|x52,0.221828237176
+x52::low,State evidence of,x52,x52::low|State evidence of|x52,0.709436833858
+x52::rise,State evidence of,x52,x52::rise|State evidence of|x52,0.359590053558
+x52,Has abnormal state,x52::fall,x52|Has abnormal state|x52::fall,0.392829447985
+x52,Has abnormal state,x52::high,x52|Has abnormal state|x52::high,1.138692379
+x52,Has abnormal state,x52::low,x52|Has abnormal state|x52::low,0.116313487291
+x52,Has abnormal state,x52::rise,x52|Has abnormal state|x52::rise,0.405596196651
+x52,State of,Condenser,x52|State of|Condenser,1.27944946289
+x52,State of,Stream 13,x52|State of|Stream 13,0.123259648681
+x5::fall,State evidence of,x5,x5::fall|State evidence of|x5,0.308145701885
+x5::high,State evidence of,x5,x5::high|State evidence of|x5,0.275056988001
+x5::low,State evidence of,x5,x5::low|State evidence of|x5,0.338179379702
+x5::rise,State evidence of,x5,x5::rise|State evidence of|x5,0.288652837276
+x5,Has abnormal state,x5::fall,x5|Has abnormal state|x5::fall,0.341549098492
+x5,Has abnormal state,x5::high,x5|Has abnormal state|x5::high,0.426304906607
+x5,Has abnormal state,x5::low,x5|Has abnormal state|x5::low,0.237248942256
+x5,Has abnormal state,x5::rise,x5|Has abnormal state|x5::rise,0.366628557444
+x5,State of,Stream 8,x5|State of|Stream 8,1.31953203678
+x6::fall,State evidence of,x6,x6::fall|State evidence of|x6,0.895756959915
+x6::high,State evidence of,x6,x6::high|State evidence of|x6,0.675682902336
+x6::low,State evidence of,x6,x6::low|State evidence of|x6,0.936897695065
+x6::rise,State evidence of,x6,x6::rise|State evidence of|x6,0.92295897007
+x6,Has abnormal state,x6::fall,x6|Has abnormal state|x6::fall,1.09470355511
+x6,Has abnormal state,x6::high,x6|Has abnormal state|x6::high,1.28242254257
+x6,Has abnormal state,x6::low,x6|Has abnormal state|x6::low,0.687178134918
+x6,Has abnormal state,x6::rise,x6|Has abnormal state|x6::rise,0.855692327023
+x6,State of,Stream 6,x6|State of|Stream 6,0.349181413651
+x7::fall,State evidence of,x7,x7::fall|State evidence of|x7,0.245276868343
+x7::high,State evidence of,x7,x7::high|State evidence of|x7,0.667069792747
+x7::low,State evidence of,x7,x7::low|State evidence of|x7,0.027280472219
+x7::rise,State evidence of,x7,x7::rise|State evidence of|x7,0.865748882294
+x7,Has abnormal state,x7::fall,x7|Has abnormal state|x7::fall,1.20476961136
+x7,Has abnormal state,x7::high,x7|Has abnormal state|x7::high,0.131679281592
+x7,Has abnormal state,x7::low,x7|Has abnormal state|x7::low,1.95918500423
+x7,Has abnormal state,x7::rise,x7|Has abnormal state|x7::rise,0.265622466803
+x7,State of,Reactor,x7|State of|Reactor,0.187197849154
+x8::fall,State evidence of,x8,x8::fall|State evidence of|x8,0.924873292446
+x8::high,State evidence of,x8,x8::high|State evidence of|x8,0.936295747757
+x8::low,State evidence of,x8,x8::low|State evidence of|x8,0.916995823383
+x8::rise,State evidence of,x8,x8::rise|State evidence of|x8,0.916872560978
+x8,Has abnormal state,x8::fall,x8|Has abnormal state|x8::fall,0.886874377728
+x8,Has abnormal state,x8::high,x8|Has abnormal state|x8::high,0.639961540699
+x8,Has abnormal state,x8::low,x8|Has abnormal state|x8::low,0.930271327496
+x8,Has abnormal state,x8::rise,x8|Has abnormal state|x8::rise,0.942943036556
+x8,State of,Reactor,x8|State of|Reactor,0.607440233231
+x9::fall,State evidence of,x9,x9::fall|State evidence of|x9,0.13293890655
+x9::high,State evidence of,x9,x9::high|State evidence of|x9,0.349491357803
+x9::low,State evidence of,x9,x9::low|State evidence of|x9,0.112077437341
+x9::rise,State evidence of,x9,x9::rise|State evidence of|x9,0.112398386002
+x9,Has abnormal state,x9::fall,x9|Has abnormal state|x9::fall,0.951003849506
+x9,Has abnormal state,x9::high,x9|Has abnormal state|x9::high,0.727372169495
+x9,Has abnormal state,x9::low,x9|Has abnormal state|x9::low,1.08126020432
+x9,Has abnormal state,x9::rise,x9|Has abnormal state|x9::rise,1.09561157227
+x9,State of,Reactor,x9|State of|Reactor,1.4679299593
